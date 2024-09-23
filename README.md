@@ -5,15 +5,15 @@
 
 ## Integrantes
 
-- Pessoa 1: Scrum Master
-- Pessoa 2: Desenvolvimento
-- Pessoa 3: Desenvolvimento
-- Pessoa 4: Desenvolvimento
-- Pessoa 5: Desenvolvimento
+- Ian Meirelles: Scrum Master
+- Luiz Moura: Desenvolvimento
+- Marcelo Castro: Desenvolvimento
+- Theo Moyses: Desenvolvimento
+- Matheus Andrade: Desenvolvimento
 
-# 1. Nome do Projeto: IbmecFood
+# 1. Nome do Projeto: CPTM Way
 
-Um aplicativo de gestão de pedidos em restaurantes.
+Um aplicativo para facilitar o acesso e acompanhamento do metrô de SP.
 
 ## 2. Apresentação do Projeto
 
