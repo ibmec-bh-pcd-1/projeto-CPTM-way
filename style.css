@@ -1,0 +1,19 @@
+#Navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    justify-content: center;
+}
+#paihf{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+#hf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+}
