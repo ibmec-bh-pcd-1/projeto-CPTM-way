@@ -4,6 +4,7 @@
     flex-direction: row;
     gap: 150px;
     justify-content: center;
+    border-bottom:2px solid rgb(153, 153, 153) ;
 }
 #paihf{
     display: flex;
@@ -16,4 +17,128 @@
     align-items: center;
     flex-direction: column;
     width: 60%;
+}
+#Bras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Progresso{
+    width: 60%;
+    height: 50px;
+    background-color: rgb(206, 205, 205);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: brown;
+
+}
+#metrozinho{
+    width: 90px;
+}
+#Timer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Endereço{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+#MA{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    
+}
+#Mudança{
+    width: 50%;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    flex-direction: column;
+    border-right:2px solid gray;
+    
+}
+#Acessibilidade{
+    display: flex;
+    text-align: center;
+    align-content: center;
+    flex-direction: column;
+
+    width: 50%;
+    
+}
+#Num{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+#Tres{
+    width: 3%;
+    background-color: brown;
+    border: 1px solid black;
+    border-radius: 100%;
+    font-size: large;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Dez {
+    width: 3%;
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 100%;
+    font-size: large;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Onze {
+    width: 3%;
+    background-color: orangered;
+    border: 1px solid black;
+    border-radius: 100%;
+    font-size: large;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Doze {
+    width: 3%;
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 100%;
+    font-size: large;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Primeiro_Lugar, #Terceiro_Lugar{
+    display: flex;
+    justify-content: center;
+
+}
+#Txt1{
+    width: 50%;
+
+}
+#Museu{
+    width: 25%;
+    height: 250px;
 }
