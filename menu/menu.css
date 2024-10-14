@@ -1,0 +1,56 @@
+/* Botão Menu */
+#menu-button {
+    padding-left: 10px;
+}
+#menu {
+    color:#F7494B
+}
+#seta {
+    color:#79747E;
+    font-size: 12px;
+}
+
+/* Carteira */
+#wallet {
+    color:#79747E;
+}
+#money {
+    color:#79747E;
+}
+#eye {
+    color:#79747E;
+    font-size: 15px;
+}
+
+/* Ajustes da lista de links */
+.py-2 {
+    width: 60%;
+    height: 20%;
+    border-bottom: 1px solid#C9C6C6;
+    display: flex;
+    align-items: center;
+    color: #79747E;
+}
+
+/* Links */
+#qrcode {
+    color: #79747E;
+}
+#clock {
+    color: #79747E;
+}
+#subway {
+    color: #79747E;
+}
+#map {
+    color: #79747E;
+}
+#suport {
+    color: #79747E;
+}
+#perfil {
+    color: #79747E;
+}
+#logout {
+    color: #79747E;
+}

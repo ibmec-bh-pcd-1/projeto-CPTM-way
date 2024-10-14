@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trajeto Metrô</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>   
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>   
+    <title>Document</title>
 </head>
 <body>
     <div x-data="{ open: false, showMoney: false }" class="relative">
@@ -69,29 +69,5 @@
             </nav>
         </aside>
     </div>      
-    <div class="container"> 
-        <header class="header">
-            <h1>Seu trajeto pelo metrô, mais fácil e prático!</h1>
-        </header>
-        <main>
-            <div class="search-box">
-                <form>
-                    <div class="input-group1">
-                        <input type="text" placeholder="Saindo de" id="saindo">
-                    </div>
-                    <div class="input-group2">
-                        <input type="text" placeholder="Indo para" id="indo">
-                    </div>
-                    <button type="submit" id="submit">Buscar</button>
-                </form>
-            </div>
-
-            <!-- Banner inferior -->
-            <div class="footer-banner">
-                <img src="people.png" alt="Em Movimento Por Elas">
-                <p>Em Movimento Por Elas</p>
-            </div>
-        </main>
-    </div>
 </body>
 </html>
