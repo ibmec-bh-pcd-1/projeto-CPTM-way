@@ -26,6 +26,12 @@ body {
     background-color: #F7494B;
 }
 
+/* Logo CPTM */
+.logocptm {
+    width: 55px;
+    margin-right: 45px;
+}
+
 /* Estilos do conteúdo principal */
 main {
     width: 100%;
