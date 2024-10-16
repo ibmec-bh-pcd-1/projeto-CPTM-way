@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>Trajeto Metrô</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>   
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-white h-screen w-full">
     <div x-data="{ open: false, showMoney: false }" class="relative">
         <!-- Botão para abrir o menu -->
         <header class="bg-white-200 p-4 flex justify-between items-center z-20 relative">
@@ -21,7 +22,9 @@
             </button>
             <div class="flex-grow text-center">
                 <a href="#">
-                    <img :class="open ? 'opacity-50' : 'opacity-100'" src="imgs/cptm.png" alt="CPTM logo" class="logocptm inline-block transition-opacity duration-300">
+                    <!-- Logo com transição de opacidade ao abrir o menu -->
+                    <img :class="open ? 'opacity-50' : 'opacity-100'" src="imgs/cptm.png" alt="CPTM logo" 
+                         class="logocptm inline-block transition-opacity duration-300">
                 </a>
             </div>
         </header>
@@ -74,27 +77,44 @@
             </nav>
         </aside>
     </div>      
-    <div class="container"> 
-        <header class="header">
-            <h1>Seu trajeto pelo metrô, mais fácil e prático!</h1>
+    <div class="flex flex-col items-center text-center w-full">
+        <header class="w-full bg-red-500">
+            <h1 class="text-white text-2xl my-5 font-bold m-4 ">Ligando São Paulo de forma rápida e eficiente todos os dias</h1>
         </header>
-        <main>
-            <div class="search-box">
+        <main class="w-full max-w-full bg-red-500 flex flex-col items-center h-24">
+            <div class="bg-white rounded-lg shadow-md p-5 w-11/12">
                 <form>
-                    <div class="input-group1">
-                        <input type="text" placeholder="Saindo de" id="saindo">
+                    <div class="mb-4 text-left">
+                        <input type="text" placeholder="Saindo de" required class="w-full p-2 mt-1 border-b border-gray-300 focus:outline-none pb-7">
                     </div>
-                    <div class="input-group2">
-                        <input type="text" placeholder="Indo para" id="indo">
+                    <div class="mb-6 text-left">
+                        <input type="text" placeholder="Indo para" required class="w-full p-2 mt-1 focus:outline-none">
                     </div>
-                    <button type="submit" id="submit">Buscar</button>
+                    <button type="submit" class="w-full bg-red-500 text-white p-2 text-lg rounded-md hover:bg-red-600 transition">Buscar</button>
                 </form>
             </div>
 
+            <div class="flex flex-row pt-4 mt-8 w-full text-left">
+                <p class="text-2x1 my-5 ml-8">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <br>Bilhetes Online, Viagem Rápida 
+                    <br>Economize tempo comprando online quando e onde quiser!
+                </p>
+                <p class="text-2x1 my-5">
+                    <i class="fa-regular fa-compass"></i>
+                    <br>Escolha o melhor trajeto
+                    <br>Encontre o melhor caminho para o seu destino! Planeje seu trajeto com a CPTM!
+                </p>
+                <p class="text-2x1 my-5">
+                    <i class="fa-solid fa-map-pin"></i>
+                    <br>Muitos destinos
+                    <br>Explore a cidade! Chegue aos principais pontos da Grande São Paulo com a CPTM!
+                </p>
+            </div>
             <!-- Banner inferior -->
-            <div class="footer-banner">
-                <img src="people.png" alt="Em Movimento Por Elas">
-                <p>Em Movimento Por Elas</p>
+            <div class="bg-red-500 text-white p-4 mt-8 w-full flex flex-col items-center">
+                <img src="people.png" alt="Em Movimento Por Elas" class="w-full max-w-xs">
+                <p class="mt-2 text-lg font-bold">Em Movimento Por Elas</p>
             </div>
         </main>
     </div>
