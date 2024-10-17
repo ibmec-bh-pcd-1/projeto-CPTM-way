@@ -23,7 +23,7 @@
             <div class="flex-grow text-center">
                 <a href="#">
                     <!-- Logo com transição de opacidade ao abrir o menu -->
-                    <img :class="open ? 'opacity-50' : 'opacity-100'" src="imgs/cptm.png" alt="CPTM logo" 
+                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="imgs/cptm.png" alt="CPTM logo" 
                          class="logocptm inline-block transition-opacity duration-300">
                 </a>
             </div>
@@ -78,10 +78,10 @@
         </aside>
     </div>      
     <div class="flex flex-col items-center text-center w-full">
-        <header class="w-full bg-red-500">
-            <h1 class="text-white text-2xl my-5 font-bold m-4 ">Ligando São Paulo de forma rápida e eficiente todos os dias</h1>
+        <header class="w-full bg-red-500 h-32">
+            <h1 class="text-white text-2xl my-5 font-bold m-4 mt-6">Ligando São Paulo de forma rápida e eficiente todos os dias</h1>
         </header>
-        <main class="w-full max-w-full bg-red-500 flex flex-col items-center h-24">
+        <main class="w-full max-w-full bg-red-500 flex flex-col items-center h-32">
             <div class="bg-white rounded-lg shadow-md p-5 w-11/12">
                 <form>
                     <div class="mb-4 text-left">
@@ -94,26 +94,29 @@
                 </form>
             </div>
 
-            <div class="flex flex-row pt-4 mt-8 w-full text-left">
-                <p class="text-2x1 my-5 ml-8">
-                    <i class="fa-solid fa-gauge-high"></i>
-                    <br>Bilhetes Online, Viagem Rápida 
-                    <br>Economize tempo comprando online quando e onde quiser!
+            <div class="flex flex-row justify-center pt-4 mt-8 w-full text-left gap-10 mr-8" id="elementos-meio">
+                <p class="text-2x1 my-5 w-60" id="velocidade">
+                    <i class="fa-solid fa-gauge-high" id="speed"></i>
+                    <br>
+                    <br><span class="font-bold text-red-500">Bilhetes Online, Viagem Rápida</span> 
+                    <br><span class="text-sm">Economize tempo comprando online quando e onde quiser!</span>
                 </p>
-                <p class="text-2x1 my-5">
-                    <i class="fa-regular fa-compass"></i>
-                    <br>Escolha o melhor trajeto
-                    <br>Encontre o melhor caminho para o seu destino! Planeje seu trajeto com a CPTM!
+                <p class="text-2x1 my-5 w-60" id="bussola">
+                    <i class="fa-solid fa-compass" id="compass"></i>
+                    <br>
+                    <br><span class="font-bold text-red-500">Escolha o melhor trajeto</span>
+                    <br><span class="text-sm">Encontre o melhor caminho para o seu destino! Planeje seu trajeto com a CPTM!</span>
                 </p>
-                <p class="text-2x1 my-5">
-                    <i class="fa-solid fa-map-pin"></i>
-                    <br>Muitos destinos
-                    <br>Explore a cidade! Chegue aos principais pontos da Grande São Paulo com a CPTM!
+                <p class="text-2x1 my-5 w-60" id="mapa-pino">
+                    <i class="fa-solid fa-map-pin" id="map-pin"></i>
+                    <br>
+                    <br><span class="font-bold text-red-500">Muitos destinos</span>
+                    <br><span class="text-sm">Explore a cidade! Chegue aos principais pontos da Grande São Paulo com a CPTM!</span>
                 </p>
             </div>
             <!-- Banner inferior -->
-            <div class="bg-red-500 text-white p-4 mt-8 w-full flex flex-col items-center">
-                <img src="people.png" alt="Em Movimento Por Elas" class="w-full max-w-xs">
+            <div class="bg-red-500 text-white mt-8 w-full flex flex-col items-center">
+                <img src="imgs/porelas.png" alt="Em Movimento Por Elas" class="w-full h-full mb-3" id="porelas">
                 <p class="mt-2 text-lg font-bold">Em Movimento Por Elas</p>
             </div>
         </main>
