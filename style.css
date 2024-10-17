@@ -146,17 +146,55 @@ body{
     justify-content: center;
     align-items: center;
 }
-#Primeiro_Lugar, #Terceiro_Lugar{
-    display: flex;
-    justify-content: center;
 
-}
 #Txt1{
     width: 50%;
 
 }
-#Museu{
-    width: 25%;
-    height: 250px;
+
+#Infos {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+#Primeiro_Lugar, #SegundoLugar, #Terceiro_Lugar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    gap: 20px; /* Aumenta o espaçamento entre a imagem e o texto */
+}
+
+#Primeiro_Lugar img, #SegundoLugar img, #Terceiro_Lugar img {
+    width: 200px; /* Define a largura padrão para todas as imagens */
+    height: auto;
+    object-fit: cover; /* Garante que a imagem mantenha a proporção */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+#Primeiro_Lugar div, #SegundoLugar div, #Terceiro_Lugar div {
+    max-width: 60%; /* Mantém a mesma largura do texto para todas as seções */
+    font-size: 1.1em; /* Define o tamanho do texto */
+    color: #333; /* Define a cor padrão para o texto */
+}
+
+#Primeiro_Lugar h1, #SegundoLugar h1, #Terceiro_Lugar h1 {
+    font-size: 1.4em; /* Define o tamanho dos títulos */
+    color: red; /* Define a cor vermelha para os títulos */
+    margin: 0;
+}
+
+#Primeiro_Lugar p, #SegundoLugar p, #Terceiro_Lugar p {
+    font-size: 1.1em; /* Define o tamanho dos parágrafos */
+    color: #333; /* Define a cor dos parágrafos */
+    margin-top: 5px; /* Define o espaçamento entre o título e o parágrafo */
+}
+
+
+
 
