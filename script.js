@@ -2,7 +2,7 @@
 const metrozinho = document.getElementById("metrozinho");
 const progresso = document.getElementById("Progresso");
 const timerDisplay = document.getElementById("timer");
-const totalTempo = 30; // 15 minutos em segundos (900 segundos)
+const totalTempo = 900; // 15 minutos em segundos (900 segundos)
 
 function moverMetro() {
     const progressoWidth = progresso.offsetWidth - metrozinho.offsetWidth; // Largura da barra menos a largura da imagem
