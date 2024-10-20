@@ -44,8 +44,14 @@ h1 {
         margin-left: 50px;
         gap: 12px;
     }
-    #porelas {
-        
+    #metrocptm {
+        height: 100%;
+        padding-top: 0;
+        margin-top: 0;
+        padding-bottom: 5%;
+    }
+    #textotitulo {
+        font-size: 30px;
     }
 }
 
@@ -119,4 +125,8 @@ h1 {
 #compass {
     color: #79747E;
     font-size: 2em;
+}
+
+#texto {
+    color: #79747E; 
 }
