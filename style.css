@@ -1,6 +1,55 @@
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
 }
+
+#Navbar h2, #hf h2, #Bras h1, #Timer h1, #Endereço h2, #Mudança h1, #Acessibilidade h1, #Infos h1 {
+    font-size: 1.5em; 
+}
+
+#hf p, #Endereço h2, #Infos p {
+    font-size: 1.2em; 
+}
+
+#timer {
+    font-size: 2em; 
+}
+
+#Primeiro_Lugar h1, #SegundoLugar h1, #Terceiro_Lugar h1 {
+    font-size: 1.6em; 
+}
+
+#Primeiro_Lugar p, #SegundoLugar p, #Terceiro_Lugar p {
+    font-size: 1.2em; 
+}
+
+/* Ajustes em tamanhos menores para não quebrar o layout */
+@media(max-width: 431px) and (min-width: 300px) {
+    body {
+        font-size: 12px;
+    }
+
+    #Navbar h2, #Bras h1, #Timer h1, #Endereço h2, #Mudança h1, #Acessibilidade h1, #Infos h1 {
+        font-size: 2em; 
+    }
+
+    #hf p, #Endereço h2, #Infos p {
+        font-size: 1.1em; 
+    }
+
+    #timer {
+        font-size: 1.8em; 
+    }
+
+    #Primeiro_Lugar h1, #SegundoLugar h1, #Terceiro_Lugar h1 {
+        font-size: 1.4em; 
+    }
+
+    #Primeiro_Lugar p, #SegundoLugar p, #Terceiro_Lugar p {
+        font-size: 1.1em; 
+    }
+}
+
 #Navbar{
     width: 100%;
     display: flex;
@@ -51,7 +100,7 @@ body{
 #metrozinho{
     width: 60px;
     position: absolute;
-    top:-4px; /* Posiciona o metrô acima da barra */
+    top:-4px; 
     left: 0;
 }
 #Timer{
@@ -167,39 +216,39 @@ body{
     padding: 20px;
     border: 1px solid lightgray;
     border-radius: 10px;
-    gap: 20px; /* Aumenta o espaçamento entre a imagem e o texto */
+    gap: 20px; 
 }
 
 #Primeiro_Lugar img, #SegundoLugar img, #Terceiro_Lugar img {
-    width: 200px; /* Define a largura padrão para todas as imagens */
+    width: 200px; 
     height: auto;
-    object-fit: cover; /* Garante que a imagem mantenha a proporção */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
+    object-fit: cover; 
+    border-radius: 10px; 
 }
 
 #Primeiro_Lugar div, #SegundoLugar div, #Terceiro_Lugar div {
-    max-width: 60%; /* Mantém a mesma largura do texto para todas as seções */
-    font-size: 1.1em; /* Define o tamanho do texto */
-    color: #333; /* Define a cor padrão para o texto */
+    max-width: 60%; 
+    font-size: 1.1em; 
+    color: #333; 
 }
 
 #Primeiro_Lugar h1, #SegundoLugar h1, #Terceiro_Lugar h1 {
-    font-size: 1.4em; /* Define o tamanho dos títulos */
-    color: red; /* Define a cor vermelha para os títulos */
+    font-size: 1.4em;
+    color: red; 
     margin: 0;
 }
 
 #Primeiro_Lugar p, #SegundoLugar p, #Terceiro_Lugar p {
-    font-size: 1.1em; /* Define o tamanho dos parágrafos */
-    color: #333; /* Define a cor dos parágrafos */
-    margin-top: 5px; /* Define o espaçamento entre o título e o parágrafo */
+    font-size: 1.1em; 
+    color: #333; 
+    margin-top: 5px; 
 }
 
 
 @media(max-width: 431px) and (min-width: 300px) {
     body{
         font-size: 7px;
-        overflow-y: auto; /* Garante a rolagem vertical */
+        overflow-y: auto; 
         
     }
     #Navbar {
@@ -222,8 +271,8 @@ body{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        max-width: 100%; /* Adiciona um limite máximo */
-        padding: 0 10px; /* Adiciona padding lateral para evitar bordas extremas */
+        max-width: 100%; 
+        padding: 0 10px; 
     }
 
     #Bras {
@@ -234,8 +283,8 @@ body{
     }
 
     #Progresso {
-        width: 100%; /* Ajuste para preencher a largura da tela */
-        max-width: 430px; /* Define um limite máximo */
+        width: 100%; 
+        max-width: 430px; 
         height: 35px;
         background-color: rgb(207, 225, 234);
         border-radius: 15px;
@@ -369,38 +418,122 @@ body{
         gap: 20px;
     }
 
-    #Primeiro_Lugar img,
-    #SegundoLugar img,
-    #Terceiro_Lugar img {
-        width: 100px; /* Ajuste a largura da imagem para evitar problemas em telas menores */
+    #Primeiro_Lugar img, #SegundoLugar img, #Terceiro_Lugar img {
+        width: 100px; 
         height: auto;
         object-fit: cover;
         border-radius: 10px;
     }
 
-    #Primeiro_Lugar div,
-    #SegundoLugar div,
-    #Terceiro_Lugar div {
-        max-width: 100%; /* Garante que o conteúdo não ultrapasse a tela */
+    #Primeiro_Lugar div, #SegundoLugar div, #Terceiro_Lugar div {
+        max-width: 100%; 
         font-size: 1.1em;
         color: #333;
     }
 
-    #Primeiro_Lugar h1,
-    #SegundoLugar h1,
-    #Terceiro_Lugar h1 {
+    #Primeiro_Lugar h1, #SegundoLugar h1, #Terceiro_Lugar h1 {
         font-size: 1.4em;
         color: red;
         margin: 0;
     }
 
-    #Primeiro_Lugar p,
-    #SegundoLugar p,
-    #Terceiro_Lugar p {
+    #Primeiro_Lugar p, #SegundoLugar p, #Terceiro_Lugar p {
         font-size: 1.1em;
         color: #333;
         margin-top: 5px;
     }
 }
 
+@media(max-width: 400px) {
+    body {
+        font-size: 6px;
+    }
+    #Bras h1 {
+        font-size: 1.5em;
+    }
+    #Primeiro_Lugar img, #SegundoLugar img, #Terceiro_Lugar img {
+        width: 80px;
+        height: auto;
+    }
+}
 
+
+/*MENU LATERAL*/
+/* Logo CPTM */
+.logocptm {
+    width: 35px;
+    margin-right: 45px;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+} 
+
+/* Botão Menu */
+#menu-button {
+    padding-left: 10px;
+}
+#menu {
+    color:#F7494B;
+    font-size: 20px;
+}
+#seta {
+    color:#79747E;
+    font-size: 12px;
+}
+
+/* Carteira */
+#wallet {
+    color:#79747E;
+}
+#money {
+    color:#79747E;
+}
+#eye {
+    color:#79747E;
+    font-size: 15px;
+}
+
+/* Ajustes da lista de links */
+.py-2 {
+    width: 60%;
+    height: 20%;
+    border-bottom: 1px solid#C9C6C6;
+    display: flex;
+    align-items: center;
+    color: #79747E;
+}
+
+/* Links */
+#qrcode {
+    color: #79747E;
+}
+#clock {
+    color: #79747E;
+}
+#subway {
+    color: #79747E;
+}
+#map {
+    color: #79747E;
+}
+#suport {
+    color: #79747E;
+}
+#perfil {
+    color: #79747E;
+}
+#logout {
+    color: #79747E;
+}
+
+
+.py-2 {
+    width: 80%; 
+    height: 30%; 
+    border-bottom: 1px solid #C9C6C6;
+    display: flex;
+    align-items: center;
+    color: #79747E;
+    font-size: 1.5em; 
+}
