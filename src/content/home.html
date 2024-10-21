@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>Trajeto Metrô</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>   
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,7 +23,7 @@
             <div class="flex-grow text-center">
                 <a href="#">
                     <!-- Logo com transição de opacidade ao abrir o menu -->
-                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="imgs/cptm.png" alt="CPTM logo" 
+                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="../img/cptm.png" alt="CPTM logo" 
                          class="logocptm inline-block transition-opacity duration-300">
                 </a>
             </div>
@@ -116,7 +116,7 @@
             </div>
             <!-- Banner inferior -->
             <div class="text-white mt-8 w-full h-auto flex flex-col items-center">
-                <img src="imgs/metro.png" alt="Metro CPTM" class="w-full h-2/4" id="metrocptm">
+                <img src="../img/metro.png" alt="Metro CPTM" class="w-full h-2/4" id="metrocptm">
                 <p class="mt-2 text-lg" id="metrocptmtext">
                     <span class="text-red-500 text-xl font-bold" id="textotitulo">Viaje com praticidade e segurança</span>
                     <br><br><span class="text-sm font-bold" id="texto">Com a CPTM, você pode planejar sua viagem com facilidade. Acesse os horários dos trens, escolha sua rota e aproveite um transporte rápido e eficiente para chegar ao seu destino.</span><br><br>
