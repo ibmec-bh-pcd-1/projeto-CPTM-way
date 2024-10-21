@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Linhas</title>
+    <link rel="stylesheet" href="../css/linhas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>   
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,9 +20,9 @@
                 </span>
             </button>
             <div class="flex-grow text-center">
-                <a href="#">
+                <a href="home.html">
                     <!-- Logo com transição de opacidade ao abrir o menu -->
-                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="imgs/cptm.png" alt="CPTM logo" 
+                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="../img/cptm.png" alt="CPTM logo" 
                          class="logocptm inline-block transition-opacity duration-300">
                 </a>
             </div>
@@ -67,7 +67,7 @@
                     <!-- Links -->
                     <li class="py-2"><a href="#"><i class="fa-solid fa-qrcode" id="qrcode"></i>  QR Code</a></li>
                     <li class="py-2"><a href="#"><i class="fa-regular fa-clock" id="clock"></i>  Situação</a></li>
-                    <li class="py-2"><a href="#"><i class="fa-solid fa-train-subway" id="subway"></i>  Linhas</a></li>
+                    <li class="py-2"><a href="linhas.html"><i class="fa-solid fa-train-subway" id="subway"></i>  Linhas</a></li>
                     <li class="py-2"><a href="#"><i class="fa-solid fa-map-location-dot" id="map"></i>  Mapa</a></li>
                     <li class="py-2"><a href="#"><i class="fa-regular fa-circle-question" id="suport"></i>  Suporte</a></li>
                     <li class="py-2"><a href="#"><i class="fa-regular fa-user" id="perfil"></i>  Perfil</a></li>
@@ -95,7 +95,7 @@
 
     <div id="Timer">
         <div id="Progresso">
-        <img src="imgs/metrozinho-removebg-preview.png" alt="" id="metrozinho">
+        <img src="../img/metrozinho-removebg-preview.png" alt="" id="metrozinho">
         <div id="linha"></div>
         </div>
         <br>
@@ -126,7 +126,7 @@
         <h1>Próximo à estação:</h1>
         
         <div id="Primeiro_Lugar">
-            <img src="imgs/Museu da Imigração do Estado de São Paulo.jpg" alt="" id="Museu">
+            <img src="../img/Museu da Imigração do Estado de São Paulo.jpg" alt="" id="Museu">
             <div id="Txt1">
                 <h1>Museu da Imigração do Estado de São Paulo</h1>
                 <p>Explore a história e a diversidade cultural que moldaram São Paulo em um mergulho pelas trajetórias dos imigrantes. </p>
@@ -134,7 +134,7 @@
         </div>
         
         <div id="SegundoLugar">
-            <img src="imgs/Parque-Benemérito-José-Brás.png" alt="" id="Parque">
+            <img src="../img/Parque-Benemérito-José-Brás.png" alt="" id="Parque">
             <div id="Txt2">
                 <h1>Parque Benemérito José Brás</h1>
                 <p>Explore a história e a diversidade cultural que moldaram São Paulo em um mergulho pelas trajetórias dos imigrantes.</p>       
@@ -142,13 +142,13 @@
         </div>
 
         <div id="Terceiro_Lugar">
-            <img src="imgs/Pinacoteca-do-Estado-de-São-Paulo.jpeg" alt="" id="Pina">
+            <img src="../img/Pinacoteca-do-Estado-de-São-Paulo.jpeg" alt="" id="Pina">
             <div id="Txt3">
                 <h1>Pinacoteca do Estado de São Paulo</h1>
                 <p>Uma das mais importantes galerias de arte do Brasil, onde obras clássicas e contemporâneas se encontram em um espaço inspirador.</p>
             </div>
         </div>
     </div>
-<script src="script.js"></script>
+<script src="../js/linhas.js"></script>
 </body>
 </html>
