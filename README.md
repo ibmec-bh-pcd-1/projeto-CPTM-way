@@ -24,7 +24,7 @@ Este projeto é um sistema para automatizar a gestão de pedidos em restaurantes
 Este projeto utiliza as seguintes tecnologias e ferramentas:
 
 - **Linguagens:** HTML, CSS e JS
-- **Framework:** Bootstrap
+- **Framework:** Bootstrap, Alpine.js, Tailwind
 - **Versionamento de código:** Git
 
 ### Padrão para nomes de branches
@@ -72,16 +72,3 @@ Exemplo: chore: atualizar pacotes NPM
   - **/js**: Arquivos JS.
   - **/img**: Imagens.
 - **/docs**: Documentação do projeto.
-
-
-### 5. Requisitos Funcionais
-
-1. **Cadastro de Usuários:** Permite o registro de novos usuários (admin e funcionários).
-2. **Gestão de Pedidos:** Garçons podem adicionar, editar e excluir pedidos.
-3. **Relatórios:** O sistema gera relatórios de pedidos por dia e por período.
-4. **Integração com Cozinha:** Notificações em tempo real para a cozinha quando um pedido é enviado.
-5. **Login e Autenticação:** Sistema seguro de login com autenticação JWT.
-
----
-
-Esse modelo pode ser adaptado para diversos tipos de projetos. A clareza e a organização são essenciais para facilitar o entendimento e a colaboração de novos desenvolvedores.
