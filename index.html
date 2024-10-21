@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="//unpkg.com/alpinejs" defer></script>   
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div x-data="{ open: false, showMoney: false }" class="relative">
+        <!-- Botão para abrir o menu -->
+        <header class="bg-white-200 p-4 flex justify-between items-center z-20 relative">
+            <button @click="open = !open" class="text-xl flex items-center space-x-2" id="menu-button">
+                <i class="fa-regular fa-user" id="menu"></i> 
+                <span :class="{ 'rotate-180': open }" class="inline-block transition-transform transform origin-center flex items-center">
+                    <i class="fa-solid fa-chevron-right" id="seta"></i>
+                </span>
+            </button>
+            <div class="flex-grow text-center">
+                <a href="#">
+                    <!-- Logo com transição de opacidade ao abrir o menu -->
+                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="imgs/cptm.png" alt="CPTM logo" 
+                         class="logocptm inline-block transition-opacity duration-300">
+                </a>
+            </div>
+        </header>
+      
+        <!-- Overlay escuro atrás do menu -->
+        <div x-show="open" 
+             @click="open = false" 
+             class="fixed inset-0 bg-black bg-opacity-50 z-10" 
+             x-transition:enter="transition-opacity ease-out duration-300" 
+             x-transition:enter-start="opacity-0" 
+             x-transition:enter-end="opacity-100" 
+             x-transition:leave="transition-opacity ease-in duration-200" 
+             x-transition:leave-start="opacity-100" 
+             x-transition:leave-end="opacity-0">
+        </div>
+      
+        <!-- Menu lateral -->
+        <aside x-show="open" 
+            class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg p-4 transform transition-transform z-10" 
+            x-transition:enter="transform transition-transform ease-out duration-300" 
+            x-transition:enter-start="-translate-x-full" 
+            x-transition:enter-end="translate-x-0" 
+            x-transition:leave="transform transition-transform ease-in duration-200" 
+            x-transition:leave-start="translate-x-0" 
+            x-transition:leave-end="-translate-x-full">
+            <nav class="flex flex-col h-full justify-between">
+                <!-- Itens do menu -->
+                <ul class="mt-16">
+                    <!-- Cateira -->
+                    <li class="py-2 flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-gray-700" id="money"><i class="fa-solid fa-wallet text-gray-700" id="wallet"></i>  R$</span>
+                            <span class="text-gray-700" x-show="showMoney" id="money">1.000,00</span>
+                            <span class="text-gray-700" x-show="!showMoney" id="money">●●●●●</span>
+                        </div>
+                        <button @click="showMoney = !showMoney" class="text-red-500 focus:outline-none">
+                            <i x-show="!showMoney" class="fa-regular fa-eye-slash text-xl" id="eye"></i>
+                            <i x-show="showMoney" class="fa-regular fa-eye text-xl" id="eye"></i>
+                        </button>
+                    </li>
+                    <!-- Links -->
+                    <li class="py-2"><a href="#"><i class="fa-solid fa-qrcode" id="qrcode"></i>  QR Code</a></li>
+                    <li class="py-2"><a href="#"><i class="fa-regular fa-clock" id="clock"></i>  Situação</a></li>
+                    <li class="py-2"><a href="#"><i class="fa-solid fa-train-subway" id="subway"></i>  Linhas</a></li>
+                    <li class="py-2"><a href="#"><i class="fa-solid fa-map-location-dot" id="map"></i>  Mapa</a></li>
+                    <li class="py-2"><a href="#"><i class="fa-regular fa-circle-question" id="suport"></i>  Suporte</a></li>
+                    <li class="py-2"><a href="#"><i class="fa-regular fa-user" id="perfil"></i>  Perfil</a></li>
+                    <li class="py-2"><a href="#"><i class="fa-solid fa-right-from-bracket" id="logout"></i>  Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>      
+    <nav id="Navbar">
+        <h2>Rubi</h2>
+        <h2>Turquesa</h2>
+        <h2>Coral</h2>
+        <h2>Safira</h2>
+        <h2>Jade</h2>
+    </nav>
+    <div id="paihf">
+        <div id="hf">
+            <h2>Horário de Funcionamento (Estação Rubi):</h2>
+            <p>Segunda - Sexta: 04:00 às 23:59</p>
+        </div>
+    </div>
+    <div id="Bras">
+        <h1>Brás</h1> 
+    </div> 
+
+    <div id="Timer">
+        <div id="Progresso">
+        <img src="imgs/metrozinho-removebg-preview.png" alt="" id="metrozinho">
+        <div id="linha"></div>
+        </div>
+        <br>
+        <h1>Tempo de chegada: </h1>
+        <div class="timer" id="timer">15:00</div>
+    </div>
+    <div id="Endereço">
+        <h2>Praça Agente Cícero S/N°</h2>
+        <h2>Brás - São Paulo</h2>
+    </div>
+    <div id="MA">
+        <div id="Mudança">
+            <h1>Mudança para as linhas:</h1>
+            <div id="Num">
+                <p id="Tres">3</p>
+                <p id="Dez">10</p>
+                <p id="Onze">11</p>
+                <p id="Doze">12</p>
+            </div>
+        </div>
+        <div id="Acessibilidade">
+            <h1>Acessibilidade disponível:<h1>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM680-80v-200H480q-33 0-56.5-23.5T400-360v-240q0-33 23.5-56.5T480-680q24 0 41.5 10.5T559-636q55 66 99.5 90.5T760-520v80q-53 0-107-23t-93-55v138h120q33 0 56.5 23.5T760-300v220h-80Zm-280 0q-83 0-141.5-58.5T200-280q0-72 45.5-127T360-476v82q-35 14-57.5 44.5T280-280q0 50 35 85t85 35q39 0 69.5-22.5T514-240h82q-14 69-69 114.5T400-80Z"/></svg>
+        </div>
+    </div>
+    <div id="Infos">
+        
+        <h1>Próximo à estação:</h1>
+        
+        <div id="Primeiro_Lugar">
+            <img src="imgs/Museu da Imigração do Estado de São Paulo.jpg" alt="" id="Museu">
+            <div id="Txt1">
+                <h1>Museu da Imigração do Estado de São Paulo</h1>
+                <p>Explore a história e a diversidade cultural que moldaram São Paulo em um mergulho pelas trajetórias dos imigrantes. </p>
+            </div>
+        </div>
+        
+        <div id="SegundoLugar">
+            <img src="imgs/Parque-Benemérito-José-Brás.png" alt="" id="Parque">
+            <div id="Txt2">
+                <h1>Parque Benemérito José Brás</h1>
+                <p>Explore a história e a diversidade cultural que moldaram São Paulo em um mergulho pelas trajetórias dos imigrantes.</p>       
+            </div>    
+        </div>
+
+        <div id="Terceiro_Lugar">
+            <img src="imgs/Pinacoteca-do-Estado-de-São-Paulo.jpeg" alt="" id="Pina">
+            <div id="Txt3">
+                <h1>Pinacoteca do Estado de São Paulo</h1>
+                <p>Uma das mais importantes galerias de arte do Brasil, onde obras clássicas e contemporâneas se encontram em um espaço inspirador.</p>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

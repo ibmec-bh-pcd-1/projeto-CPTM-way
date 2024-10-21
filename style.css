@@ -1,0 +1,539 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+#Navbar h2, #hf h2, #Bras h1, #Timer h1, #Endereço h2, #Mudança h1, #Acessibilidade h1, #Infos h1 {
+    font-size: 1.5em; 
+}
+
+#hf p, #Endereço h2, #Infos p {
+    font-size: 1.2em; 
+}
+
+#timer {
+    font-size: 2em; 
+}
+
+#Primeiro_Lugar h1, #SegundoLugar h1, #Terceiro_Lugar h1 {
+    font-size: 1.6em; 
+}
+
+#Primeiro_Lugar p, #SegundoLugar p, #Terceiro_Lugar p {
+    font-size: 1.2em; 
+}
+
+/* Ajustes em tamanhos menores para não quebrar o layout */
+@media(max-width: 431px) and (min-width: 300px) {
+    body {
+        font-size: 12px;
+    }
+
+    #Navbar h2, #Bras h1, #Timer h1, #Endereço h2, #Mudança h1, #Acessibilidade h1, #Infos h1 {
+        font-size: 2em; 
+    }
+
+    #hf p, #Endereço h2, #Infos p {
+        font-size: 1.1em; 
+    }
+
+    #timer {
+        font-size: 1.8em; 
+    }
+
+    #Primeiro_Lugar h1, #SegundoLugar h1, #Terceiro_Lugar h1 {
+        font-size: 1.4em; 
+    }
+
+    #Primeiro_Lugar p, #SegundoLugar p, #Terceiro_Lugar p {
+        font-size: 1.1em; 
+    }
+}
+
+#Navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    justify-content: center;
+    border-bottom:2px solid rgb(153, 153, 153) ;
+}
+#paihf{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+#hf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+}
+#Bras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Progresso{
+    width: 60%;
+    height: 35px;
+    background-color: rgb(207, 225, 234);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: brown;
+    position: relative;
+    margin: 20px auto;
+
+}
+#linha {
+    width: 99%;
+    height: 2px;
+    background-color: brown;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(500%);
+}
+#metrozinho{
+    width: 60px;
+    position: absolute;
+    top:-4px; 
+    left: 0;
+}
+#Timer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Endereço{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+#MA{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    
+}
+#Mudança{
+    width: 50%;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    flex-direction: column;
+    border-right:2px solid gray;
+    
+}
+#Acessibilidade{
+    display: flex;
+    text-align: center;
+    align-content: center;
+    flex-direction: column;
+
+    width: 50%;
+    
+}
+#Num{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+#Tres{
+    width: 3%;
+    background-color: brown;
+    border: 1px solid black;
+    border-radius: 100%;
+    font-size: large;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Dez {
+    width: 3%;
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 100%;
+    font-size: large;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Onze {
+    width: 3%;
+    background-color: orangered;
+    border: 1px solid black;
+    border-radius: 100%;
+    font-size: large;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Doze {
+    width: 3%;
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 100%;
+    font-size: large;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Txt1{
+    width: 50%;
+
+}
+
+#Infos {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#Primeiro_Lugar, #SegundoLugar, #Terceiro_Lugar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    gap: 20px; 
+}
+
+#Primeiro_Lugar img, #SegundoLugar img, #Terceiro_Lugar img {
+    width: 200px; 
+    height: auto;
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+#Primeiro_Lugar div, #SegundoLugar div, #Terceiro_Lugar div {
+    max-width: 60%; 
+    font-size: 1.1em; 
+    color: #333; 
+}
+
+#Primeiro_Lugar h1, #SegundoLugar h1, #Terceiro_Lugar h1 {
+    font-size: 1.4em;
+    color: red; 
+    margin: 0;
+}
+
+#Primeiro_Lugar p, #SegundoLugar p, #Terceiro_Lugar p {
+    font-size: 1.1em; 
+    color: #333; 
+    margin-top: 5px; 
+}
+
+
+@media(max-width: 431px) and (min-width: 300px) {
+    body{
+        font-size: 7px;
+        overflow-y: auto; 
+        
+    }
+    #Navbar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        justify-content: center;
+        border-bottom: 2px solid rgb(153, 153, 153);
+    }
+
+    #paihf {
+        display: flex;
+        justify-content: center;
+        margin-top:20px;
+    }
+
+    #hf {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 100%; 
+        padding: 0 10px; 
+    }
+
+    #Bras {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(175, 11, 11);
+    }
+
+    #Progresso {
+        width: 100%; 
+        max-width: 430px; 
+        height: 35px;
+        background-color: rgb(207, 225, 234);
+        border-radius: 15px;
+        position: relative;
+        margin: 20px auto;
+    }
+
+    #linha {
+        width: 99%;
+        height: 2px;
+        background-color: brown;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(500%);
+    }
+
+    #metrozinho {
+        width: 60px;
+        position: absolute;
+        top: -4px;
+        left: 0;
+    }
+
+    #Timer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Endereço {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: gray;
+    }
+
+    #MA {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #Mudança,
+    #Acessibilidade {
+        width: 50%;
+        display: flex;
+        text-align: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    #Mudança {
+        border-right: 2px solid gray;
+    }
+
+    #Num {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #Tres{
+        width: 25px; 
+        height: 25px; 
+        background-color: red;
+        border: 1px solid black;
+        border-radius: 100%;
+        font-size: large;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #Dez{
+        width: 25px; 
+        height: 25px; 
+        background-color: aqua;
+        border: 1px solid black;
+        border-radius: 100%;
+        font-size: large;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #Onze{
+        width: 25px; 
+        height: 25px; 
+        background-color: orangered;
+        border: 1px solid black;
+        border-radius: 100%;
+        font-size: large;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #Doze {
+        width: 25px; 
+        height: 25px; 
+        background-color: blue;
+        border: 1px solid black;
+        border-radius: 100%;
+        font-size: large;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Infos {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #Primeiro_Lugar, #SegundoLugar, #Terceiro_Lugar {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        gap: 20px;
+    }
+
+    #Primeiro_Lugar img, #SegundoLugar img, #Terceiro_Lugar img {
+        width: 100px; 
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    #Primeiro_Lugar div, #SegundoLugar div, #Terceiro_Lugar div {
+        max-width: 100%; 
+        font-size: 1.1em;
+        color: #333;
+    }
+
+    #Primeiro_Lugar h1, #SegundoLugar h1, #Terceiro_Lugar h1 {
+        font-size: 1.4em;
+        color: red;
+        margin: 0;
+    }
+
+    #Primeiro_Lugar p, #SegundoLugar p, #Terceiro_Lugar p {
+        font-size: 1.1em;
+        color: #333;
+        margin-top: 5px;
+    }
+}
+
+@media(max-width: 400px) {
+    body {
+        font-size: 6px;
+    }
+    #Bras h1 {
+        font-size: 1.5em;
+    }
+    #Primeiro_Lugar img, #SegundoLugar img, #Terceiro_Lugar img {
+        width: 80px;
+        height: auto;
+    }
+}
+
+
+/*MENU LATERAL*/
+/* Logo CPTM */
+.logocptm {
+    width: 35px;
+    margin-right: 45px;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+} 
+
+/* Botão Menu */
+#menu-button {
+    padding-left: 10px;
+}
+#menu {
+    color:#F7494B;
+    font-size: 20px;
+}
+#seta {
+    color:#79747E;
+    font-size: 12px;
+}
+
+/* Carteira */
+#wallet {
+    color:#79747E;
+}
+#money {
+    color:#79747E;
+}
+#eye {
+    color:#79747E;
+    font-size: 15px;
+}
+
+/* Ajustes da lista de links */
+.py-2 {
+    width: 60%;
+    height: 20%;
+    border-bottom: 1px solid#C9C6C6;
+    display: flex;
+    align-items: center;
+    color: #79747E;
+}
+
+/* Links */
+#qrcode {
+    color: #79747E;
+}
+#clock {
+    color: #79747E;
+}
+#subway {
+    color: #79747E;
+}
+#map {
+    color: #79747E;
+}
+#suport {
+    color: #79747E;
+}
+#perfil {
+    color: #79747E;
+}
+#logout {
+    color: #79747E;
+}
+
+
+.py-2 {
+    width: 80%; 
+    height: 30%; 
+    border-bottom: 1px solid #C9C6C6;
+    display: flex;
+    align-items: center;
+    color: #79747E;
+    font-size: 1.5em; 
+}
