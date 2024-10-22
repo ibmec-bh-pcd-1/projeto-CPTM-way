@@ -1,0 +1,115 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Logo CPTM */
+.logocptm {
+    width: 50px;
+    margin-right: 45px;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+} 
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .search-box {
+        width: 95%;
+    }
+
+    .footer-banner img {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+    #elementos-meio {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin-right: 0;
+        margin-left: 50px;
+        gap: 12px;
+    }
+    #metrocptm {
+        height: 100%;
+        padding-top: 0;
+        margin-top: 0;
+        padding-bottom: 5%;
+    }
+    #textotitulo {
+        font-size: 30px;
+    }
+}
+
+
+/* Botão Menu */
+#menu-button {
+    padding-left: 10px;
+}
+#menu {
+    color:#F7494B
+}
+#seta {
+    color:#79747E;
+    font-size: 12px;
+}
+
+/* Carteira */
+#wallet {
+    color:#79747E;
+}
+#money {
+    color:#79747E;
+}
+#eye {
+    color:#79747E;
+    font-size: 15px;
+}
+
+/* Ajustes da lista de links */
+.py-2 {
+    width: 60%;
+    height: 20%;
+    border-bottom: 1px solid#C9C6C6;
+    display: flex;
+    align-items: center;
+    color: #79747E;
+}
+
+/* Links */
+#qrcode {
+    color: #79747E;
+}
+#clock {
+    color: #79747E;
+}
+#subway {
+    color: #79747E;
+}
+#map {
+    color: #79747E;
+}
+#suport {
+    color: #79747E;
+}
+#perfil {
+    color: #79747E;
+}
+#logout {
+    color: #79747E;
+}
