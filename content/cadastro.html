@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>CPTM</title>
-    <link rel="stylesheet" href="../css/suporte.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>   
     <script src="https://cdn.tailwindcss.com"></script>
@@ -73,7 +73,29 @@
                     <li class="py-2"><a href="#"><i class="fa-regular fa-circle-question" id="suport"></i>  Suporte</a></li>
                     <li class="py-2"><a href="#"><i class="fa-regular fa-user" id="perfil"></i>  Perfil</a></li>
                     <li class="py-2"><a href="#"><i class="fa-solid fa-right-from-bracket" id="logout"></i>  Sair</a></li>
+                    
                 </ul>
             </nav>
         </aside>
+        <div class="container">
+            <h2>Crie sua conta CPTM</h2>
+            <form id="cadastroForm">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
+    
+                <label for="confirmEmail">Confirme seu E-mail</label>
+                <input type="email" id="confirmEmail" placeholder="Confirme seu e-mail" required>
+    
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
+    
+                <label for="confirmSenha">Confirme sua senha</label>
+                <input type="password" id="confirmSenha" placeholder="Confirme sua senha" required>
+    
+                <button id="button2" type="submit">Cadastrar</button>
+            </form>
+            
+        </div>
+    
+
     </div>  
