@@ -1,11 +1,9 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Logo CPTM */
 .logocptm {
     width: 50px;
     margin-right: 45px;
@@ -16,7 +14,6 @@ h1 {
 } 
 
 
-/* Responsividade */
 @media (max-width: 768px) {
     .container {
         max-width: 100%;
@@ -56,8 +53,6 @@ h1 {
     }
 }
 
-
-/* Botão Menu */
 #menu-button {
     padding-left: 10px;
 }
@@ -69,7 +64,6 @@ h1 {
     font-size: 12px;
 }
 
-/* Carteira */
 #wallet {
     color:#79747E;
 }
@@ -81,7 +75,6 @@ h1 {
     font-size: 15px;
 }
 
-/* Ajustes da lista de links */
 .py-2 {
     width: 60%;
     height: 20%;
@@ -91,7 +84,6 @@ h1 {
     color: #79747E;
 }
 
-/* Links */
 #qrcode {
     color: #79747E;
 }
@@ -112,4 +104,143 @@ h1 {
 }
 #logout {
     color: #79747E;
+}
+
+
+
+.login-container {
+    max-width: 430px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.login-container h2 {
+    font-size: 1.8rem;
+    color: #ff3b3f;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: #ff3b3f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #e33a36;
+}
+
+.or {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin: 15px 0;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.google-button {
+    color: #333;
+    background-color: #ffffff;
+}
+
+.google-button:hover {
+    background-color: #f0f0f0;
+}
+
+.facebook-button {
+    color: #ffffff;
+    background-color: #3b5998;
+}
+
+.facebook-button:hover {
+    background-color: #334d84;
+}
+
+.create-account {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+.create-account a {
+    color: #ff3b3f;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+    #elementos-meio {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin-right: 0;
+        margin-left: 50px;
+        gap: 12px;
+    }
 }

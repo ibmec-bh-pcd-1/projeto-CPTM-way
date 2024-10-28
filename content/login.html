@@ -12,7 +12,6 @@
 </head>
 <body class="bg-white h-screen w-full">
     <div x-data="{ open: false, showMoney: false }" class="relative">
-        <!-- Botão para abrir o menu -->
         <header class="bg-white-200 p-4 flex justify-between items-center z-20 relative">
             <button @click="open = !open" class="text-xl flex items-center space-x-2" id="menu-button">
                 <i class="fa-regular fa-user" id="menu"></i> 
@@ -22,14 +21,12 @@
             </button>
             <div class="flex-grow text-center">
                 <a href="home.html">
-                    <!-- Logo com transição de opacidade ao abrir o menu -->
                     <img :class="open ? 'opacity-0' : 'opacity-100'" src="../img/cptm.png" alt="CPTM logo" 
                          class="logocptm inline-block transition-opacity duration-300">
                 </a>
             </div>
         </header>
       
-        <!-- Overlay escuro atrás do menu -->
         <div x-show="open" 
              @click="open = false" 
              class="fixed inset-0 bg-black bg-opacity-50 z-10" 
@@ -41,7 +38,6 @@
              x-transition:leave-end="opacity-0">
         </div>
       
-        <!-- Menu lateral -->
         <aside x-show="open" 
             class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg p-4 transform transition-transform z-10" 
             x-transition:enter="transform transition-transform ease-out duration-300" 
@@ -51,9 +47,7 @@
             x-transition:leave-start="translate-x-0" 
             x-transition:leave-end="-translate-x-full">
             <nav class="flex flex-col h-full justify-between">
-                <!-- Itens do menu -->
                 <ul class="mt-16">
-                    <!-- Cateira -->
                     <li class="py-2 flex items-center justify-between">
                         <div class="flex items-center space-x-2">
                             <span class="text-gray-700" id="money"><i class="fa-solid fa-wallet text-gray-700" id="wallet"></i>  R$</span>
@@ -65,7 +59,6 @@
                             <i x-show="showMoney" class="fa-regular fa-eye text-xl" id="eye"></i>
                         </button>
                     </li>
-                    <!-- Links -->
                     <li class="py-2"><a href="#"><i class="fa-solid fa-qrcode" id="qrcode"></i>  QR Code</a></li>
                     <li class="py-2"><a href="situacao.html"><i class="fa-regular fa-clock" id="clock"></i>  Situação</a></li>
                     <li class="py-2"><a href="linhas.html"><i class="fa-solid fa-train-subway" id="subway"></i>  Linhas</a></li>
@@ -76,4 +69,40 @@
                 </ul>
             </nav>
         </aside>
-    </div>      
+    </div>  
+    <div class="login-container mx-auto mt-8">
+        <h2 class="text-center text-red-500 font-bold text-2xl mb-4">Entrar na sua conta</h2>
+        
+        <form id="loginForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                    E-mail:
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Digite seu e-mail" required>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="senha">
+                    Senha:
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="senha" type="password" placeholder="Digite sua senha" required>
+            </div>
+            
+            <div class="flex items-center justify-between">
+                <button class="login-button" type="submit">Continuar</button>
+            </div>
+        </form>
+
+        <p class="text-center text-gray-600 my-4">Ou escolha a opção</p>
+
+        <div class="social-buttons">
+            <button class="social-button google-button"><i class="fab fa-google"></i> Continuar com Google</button>
+            <button class="social-button facebook-button"><i class="fab fa-facebook"></i> Continuar com Facebook</button>
+        </div>
+
+        <p class="create-account">Não tem conta? <a href="#">Criar conta</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
