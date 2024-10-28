@@ -231,21 +231,19 @@ body{
 
     #Pai{
         background-color: #F7494B;
-    }
-
-    #paihf {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top:20px;
-        font-size: 11px;
+        flex-direction: column;
     }
+
     #hf {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        max-width: 100%; 
+        width: 100%;
+        max-width: 90%; 
         padding: 0 10px; 
         color: white;
         font-weight: bold;
@@ -258,6 +256,7 @@ body{
         color: white;
         font-size: 13px;
         font-style: bold;
+        margin-top:40px ;
     }
 
     #Progresso {
@@ -292,7 +291,7 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 10px;
+        font-size: 25px;
         color: white;
         font-weight: bold;
     }
@@ -389,13 +388,14 @@ body{
     }
 
     .carousel-description {
-        background-color: #dc3545; /* Cor de fundo vermelha */
+        background-color: #F7494B; /* Cor de fundo vermelha */
         color: white; /* Texto branco */
         text-align: center; /* Centraliza o texto */
         padding: 15px 10px; /* Espaçamento interno */
         border-radius: 0 0 10px 10px; /* Arredonda os cantos inferiores para combinar com o carousel */
         font-size: 20px; /* Aumenta o tamanho da fonte */
         margin-top: -20px;
+        font-weight: bold;
       }
 
 }
