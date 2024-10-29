@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>   
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #mapagoogle {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body class="bg-white h-screen w-full">
     <div x-data="{ open: false, showMoney: false }" class="relative">
@@ -76,4 +82,73 @@
                 </ul>
             </nav>
         </aside>
-    </div>  
+    </div> 
+    <div class="container2 mx-auto p-4 max-w-md">
+        <!-- Seção de Pesquisa -->
+        <div class="search-section text-center">
+            <h1 class="text-lg font-semibold mb-4">Ache seu caminho conosco</h1>
+            <input type="text" id="start" placeholder="Saindo de" class="search-input mb-2 p-3 w-full border border-gray-300 rounded-md">
+            <input type="text" id="end" placeholder="Indo para" class="search-input mb-4 p-3 w-full border border-gray-300 rounded-md">
+            <button onclick="calculateRoute()" class="mb-4 p-3 bg-blue-500 text-white rounded-md w-full">Traçar Rota</button>
+            
+            <!-- Mapa -->
+            <div id="mapagoogle" class="w-full h-80 rounded-md shadow-md mb-4"></div>
+            
+            <!-- Sugestões -->
+            <h2 class="text-lg font-semibold mb-2">Sugestões</h2>
+            <div class="suggestions-grid grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
+                <div class="suggestion-item p-3 border border-gray-300 rounded-md flex items-center justify-center">
+                    Casa
+                </div>
+                <div class="suggestion-item p-3 border border-gray-300 rounded-md flex items-center justify-center">
+                    Ibmec
+                </div>
+                <div class="suggestion-item p-3 border border-gray-300 rounded-md flex items-center justify-center">
+                    Casa
+                </div>
+                <div class="suggestion-item p-3 border border-gray-300 rounded-md flex items-center justify-center">
+                    Ibmec
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=<APIKEY>&callback=initMap" async defer></script>
+    <script>
+        let map, directionsService, directionsRenderer;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("mapagoogle"), {
+                center: { lat: -23.55052, lng: -46.633308 }, // Centro de São Paulo
+                zoom: 13,
+            });
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+        }
+
+        function calculateRoute() {
+            const start = document.getElementById("start").value;
+            const end = document.getElementById("end").value;
+
+            if (start && end) {
+                const request = {
+                    origin: start,
+                    destination: end,
+                    travelMode: google.maps.TravelMode.DRIVING,
+                };
+                directionsService.route(request, (result, status) => {
+                    if (status === google.maps.DirectionsStatus.OK) {
+                        directionsRenderer.setDirections(result);
+                    } else {
+                        alert("Não foi possível calcular a rota. Tente novamente.");
+                    }
+                });
+            } else {
+                alert("Por favor, preencha ambos os campos.");
+            }
+        }
+    </script>
+</body>
+</html>
+
