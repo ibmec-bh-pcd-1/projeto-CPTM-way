@@ -230,7 +230,7 @@ body{
     }
 
     #Pai{
-        background-color: #F7494B;
+        background-color: #ffffff;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -245,7 +245,7 @@ body{
         width: 100%;
         max-width: 90%; 
         padding: 0 10px; 
-        color: white;
+        color: rgb(0, 0, 0);
         font-weight: bold;
     }
     
@@ -253,7 +253,7 @@ body{
         display: flex;
         justify-content:center;
         align-items: end;
-        color: white;
+        color: rgb(0, 0, 0);
         font-size: 13px;
         font-style: bold;
         margin-top:40px ;
@@ -266,6 +266,8 @@ body{
         background-color: white;
         border-radius: 15px;
         margin: 20px auto;
+        border: 1px solid rgb(101, 100, 100);
+        
     }
 
     #linha {
@@ -292,12 +294,12 @@ body{
         justify-content: center;
         align-items: center;
         font-size: 25px;
-        color: white;
+        color: rgb(101, 100, 100);
         font-weight: bold;
     }
 
     #timer_chegada{
-        color: white;
+        color: rgb(101, 100, 100);
     }
 
     #Endereço {
@@ -305,9 +307,18 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: white;
+        color: rgb(101, 100, 100);
         font-weight: 100;
         font-size: 15px;
+        font-weight: bold;
+    }
+    #caixa{
+        border-radius: 15px;
+        margin: 20px auto;
+        border: 1px solid #767474;
+        margin-left: 5px;
+        margin-right: 5px;
+
     }
 
     #MA {
