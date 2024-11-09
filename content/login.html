@@ -70,37 +70,40 @@
             </nav>
         </aside>
     </div>  
+    
     <div class="login-container mx-auto mt-8">
-        <h2 class="text-center text-red-500 font-bold text-2xl mb-4">Entrar na sua conta</h2>
-        
-        <form id="loginForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-                    E-mail:
-                </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Digite seu e-mail" required>
-            </div>
+        <div class="red-background">
+            <h2 class="text-center font-bold text-2xl mb-4">Entrar na sua conta</h2>
             
-            <div class="mb-6">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="senha">
-                    Senha:
-                </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="senha" type="password" placeholder="Digite sua senha" required>
-            </div>
+            <form id="loginForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                        <p class="email">E-mail:</p>
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="" required>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="senha">
+                        <p class="email">Senha:</p>
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="senha" type="password" placeholder="" required>
+                </div>
             
-            <div class="flex items-center justify-between">
-                <button class="login-button" type="submit">Continuar</button>
+                <div class="flex items-center justify-between">
+                    <button class="login-button" type="submit">Continuar</button>
+                </div>
+            </form>
+
+            <p class="text-center text-gray-600 my-4">Ou escolha a opção</p>
+
+            <div class="social-buttons">
+                <button class="social-button google-button"><i class="fab fa-google"></i> Continuar com Google</button>
+                <button class="social-button facebook-button"><i class="fab fa-facebook"></i> Continuar com Facebook</button>
             </div>
-        </form>
 
-        <p class="text-center text-gray-600 my-4">Ou escolha a opção</p>
-
-        <div class="social-buttons">
-            <button class="social-button google-button"><i class="fab fa-google"></i> Continuar com Google</button>
-            <button class="social-button facebook-button"><i class="fab fa-facebook"></i> Continuar com Facebook</button>
+            <p class="create-account">Não tem conta? <a href="#">Criar conta</a></p>
         </div>
-
-        <p class="create-account">Não tem conta? <a href="#">Criar conta</a></p>
     </div>
 
     <script src="script.js"></script>

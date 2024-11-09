@@ -13,100 +13,14 @@ h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 } 
 
-
-@media (max-width: 768px) {
-    .container {
-        max-width: 100%;
-    }
-
-    .search-box {
-        width: 95%;
-    }
-
-    .footer-banner img {
-        max-width: 100%;
-    }
-
-    h1 {
-        font-size: 18px;
-    }
-
-    button {
-        font-size: 14px;
-    }
-    #elementos-meio {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        margin-right: 0;
-        margin-left: 50px;
-        gap: 12px;
-    }
-    #metrocptm {
-        height: 100%;
-        padding-top: 0;
-        margin-top: 0;
-        padding-bottom: 5%;
-    }
-    #textotitulo {
-        font-size: 30px;
-    }
+.red-background {
+    width: 100%px;
+    height: 25vh;
+    background-color: #F7494B;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-#menu-button {
-    padding-left: 10px;
-}
-#menu {
-    color:#F7494B
-}
-#seta {
-    color:#79747E;
-    font-size: 12px;
-}
-
-#wallet {
-    color:#79747E;
-}
-#money {
-    color:#79747E;
-}
-#eye {
-    color:#79747E;
-    font-size: 15px;
-}
-
-.py-2 {
-    width: 60%;
-    height: 20%;
-    border-bottom: 1px solid#C9C6C6;
-    display: flex;
-    align-items: center;
-    color: #79747E;
-}
-
-#qrcode {
-    color: #79747E;
-}
-#clock {
-    color: #79747E;
-}
-#subway {
-    color: #79747E;
-}
-#map {
-    color: #79747E;
-}
-#suport {
-    color: #79747E;
-}
-#perfil {
-    color: #79747E;
-}
-#logout {
-    color: #79747E;
-}
-
-
 
 .login-container {
     max-width: 430px;
@@ -120,20 +34,22 @@ h1 {
 
 .login-container h2 {
     font-size: 1.8rem;
-    color: #ff3b3f;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 form {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 
 form label {
     font-size: 1rem;
-    color: #333;
+    color: #000000;
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -144,25 +60,27 @@ form input[type="password"] {
     padding: 12px;
     margin-bottom: 15px;
     font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 1px solid #d8d5d5;
+    border-radius: 10px;
 }
-
+.email{
+    color: #F7494B;
+}
 .login-button {
     width: 100%;
     padding: 15px;
     font-size: 1.1rem;
     color: #ffffff;
-    background-color: #ff3b3f;
+    background-color: #F7494B;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     margin-top: 15px;
     transition: background-color 0.3s;
 }
 
 .login-button:hover {
-    background-color: #e33a36;
+    background-color: #F7494B;
 }
 
 .or {
@@ -183,7 +101,7 @@ form input[type="password"] {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #a8a4a4;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
@@ -191,21 +109,21 @@ form input[type="password"] {
 }
 
 .google-button {
-    color: #333;
+    color: #000000;
     background-color: #ffffff;
 }
 
 .google-button:hover {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
 }
 
 .facebook-button {
-    color: #ffffff;
-    background-color: #3b5998;
+    color: #000000;
+    background-color: #ffffff;
 }
 
 .facebook-button:hover {
-    background-color: #334d84;
+    background-color: #ffffff;
 }
 
 .create-account {
@@ -215,7 +133,7 @@ form input[type="password"] {
 }
 
 .create-account a {
-    color: #ff3b3f;
+    color: #F7494B;
     text-decoration: none;
 }
 
@@ -234,13 +152,5 @@ form input[type="password"] {
 
     button {
         font-size: 14px;
-    }
-    #elementos-meio {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        margin-right: 0;
-        margin-left: 50px;
-        gap: 12px;
     }
 }
