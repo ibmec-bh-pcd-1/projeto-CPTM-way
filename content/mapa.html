@@ -84,36 +84,33 @@
         </aside>
     </div> 
     <div class="container2 mx-auto p-4 max-w-md">
-        <!-- Seção de Pesquisa -->
         <div class="search-section text-center">
-            <h1 class="text-lg font-semibold mb-4">Ache seu caminho conosco</h1>
-            <input type="text" id="start" placeholder="Saindo de" class="search-input mb-2 p-3 w-full border border-gray-300 rounded-md">
-            <input type="text" id="end" placeholder="Indo para" class="search-input mb-4 p-3 w-full border border-gray-300 rounded-md">
-            <button onclick="calculateRoute()" class="mb-4 p-3 bg-blue-500 text-white rounded-md w-full">Traçar Rota</button>
-            
-            <!-- Mapa -->
+            <h1 class="text-lg font-semibold mb-1 flex justify-left">Ache seu caminho conosco</h1>
+            <input type="text" id="start" placeholder="Saindo de" class="search-input mb-2 p-3 w-full bg-gray-100 rounded-md">
+            <input type="text" id="end" placeholder="Indo para" class="search-input mb-4 p-3 w-full bg-gray-100 rounded-md">
+            <button onclick="calculateRoute()" class="mb-4 p-3 bg-red-500 text-white rounded-md w-full">Procurar seu caminho</button>
+        
             <div id="mapagoogle" class="w-full h-80 rounded-md shadow-md mb-4"></div>
             
-            <!-- Sugestões -->
-            <h2 class="text-lg font-semibold mb-2">Sugestões</h2>
+            <h2 class="text-lg font-semibold mb-2 flex justify-left">Sugestões</h2>
             <div class="suggestions-grid grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
-                <div class="suggestion-item p-3 border border-gray-300 rounded-md flex items-center justify-center">
+                <div class="suggestion-item p-3 bg-gray-100 rounded-md flex items-center justify-center">
                     Casa
                 </div>
-                <div class="suggestion-item p-3 border border-gray-300 rounded-md flex items-center justify-center">
+                <div class="suggestion-item p-3 bg-gray-100 rounded-md flex items-center justify-center">
                     Ibmec
                 </div>
-                <div class="suggestion-item p-3 border border-gray-300 rounded-md flex items-center justify-center">
+                <div class="suggestion-item p-3 bg-gray-100 rounded-md flex items-center justify-center">
+                    Ibmec
+                </div>
+                <div class="suggestion-item p-3 bg-gray-100 rounded-md flex items-center justify-center">
                     Casa
-                </div>
-                <div class="suggestion-item p-3 border border-gray-300 rounded-md flex items-center justify-center">
-                    Ibmec
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=<APIKEY>&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA62cESUiB52VWrYe05TleAaJFSAyRXlQQ&callback=initMap" async defer></script>
     <script>
         let map, directionsService, directionsRenderer;
 

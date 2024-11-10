@@ -114,37 +114,39 @@ h1 {
 }
 
 
-/* Container Principal */
-.container2 {
-    max-width: 400px;
-    margin: 0 auto;
-}
+@media (max-width: 768px) {
+    /* Container Principal */
+    .container2 {
+        max-width: 400px;
+        margin: 0 auto;
+    }
 
-/* Seção de Pesquisa */
-.search-section h1 {
-    color: #333;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+    /* Seção de Pesquisa */
+    .search-section h1 {
+        color: black;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
 
-/* Campos de Entrada */
-.search-input {
-    font-size: 16px;
-    color: #333;
-}
+    /* Campos de Entrada */
+    .search-input {
+        font-size: 16px;
+        color: #5F5F5F;
+    }
 
-/* Mapa */
-.map-container img {
-    object-fit: cover;
-}
+    /* Mapa */
+    .map-container img {
+        object-fit: cover;
+    }
 
-/* Sugestões */
-.suggestions-grid {
-    display: grid;
-    gap: 8px;
-}
+    /* Sugestões */
+    .suggestions-grid {
+        display: grid;
+        gap: 8px;
+    }
 
-.suggestion-item {
-    font-size: 16px;
-    color: #333;
-    text-align: center;
+    .suggestion-item {
+        font-size: 16px;
+        color: #5F5F5F;
+        text-align: center;
+    }
 }
