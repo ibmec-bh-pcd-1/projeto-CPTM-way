@@ -51,29 +51,73 @@
             x-transition:leave-start="translate-x-0" 
             x-transition:leave-end="-translate-x-full">
             <nav class="flex flex-col h-full justify-between">
-                <!-- Itens do menu -->
                 <ul class="mt-16">
-                    <!-- Cateira -->
                     <li class="py-2 flex items-center justify-between">
                         <div class="flex items-center space-x-2">
-                            <span class="text-gray-700" id="money"><i class="fa-solid fa-wallet text-gray-700" id="wallet"></i>  R$</span>
-                            <span class="text-gray-700" x-show="showMoney" id="money">1.000,00</span>
-                            <span class="text-gray-700" x-show="!showMoney" id="money">●●●●●</span>
+                            <span class="text-gray-700"><i class="fa-solid fa-wallet text-gray-700"></i> R$</span>
+                            <span class="text-gray-700" x-show="showMoney">1.000,00</span>
+                            <span class="text-gray-700" x-show="!showMoney">●●●●●</span>
                         </div>
                         <button @click="showMoney = !showMoney" class="text-red-500 focus:outline-none">
-                            <i x-show="!showMoney" class="fa-regular fa-eye-slash text-xl" id="eye"></i>
-                            <i x-show="showMoney" class="fa-regular fa-eye text-xl" id="eye"></i>
+                            <i x-show="!showMoney" class="fa-regular fa-eye-slash text-xl"></i>
+                            <i x-show="showMoney" class="fa-regular fa-eye text-xl"></i>
                         </button>
                     </li>
-                    <!-- Links -->
-                    <li class="py-2"><a href="#"><i class="fa-solid fa-qrcode" id="qrcode"></i>  QR Code</a></li>
-                    <li class="py-2"><a href="situacao.html"><i class="fa-regular fa-clock" id="clock"></i>  Situação</a></li>
-                    <li class="py-2"><a href="linhas.html"><i class="fa-solid fa-train-subway" id="subway"></i>  Linhas</a></li>
-                    <li class="py-2"><a href="#"><i class="fa-solid fa-map-location-dot" id="map"></i>  Mapa</a></li>
-                    <li class="py-2"><a href="#"><i class="fa-regular fa-circle-question" id="suport"></i>  Suporte</a></li>
-                    <li class="py-2"><a href="#"><i class="fa-regular fa-user" id="perfil"></i>  Perfil</a></li>
-                    <li class="py-2"><a href="#"><i class="fa-solid fa-right-from-bracket" id="logout"></i>  Sair</a></li>
+                    <li class="py-2"><a href="#"><i class="fa-solid fa-qrcode"></i> QR Code</a></li>
+                    <li class="py-2"><a href="situacao.html"><i class="fa-regular fa-clock"></i> Situação</a></li>
+                    <li class="py-2"><a href="linhas.html"><i class="fa-solid fa-train-subway"></i> Linhas</a></li>
+                    <li class="py-2"><a href="#"><i class="fa-solid fa-map-location-dot"></i> Mapa</a></li>
+                    <li class="py-2"><a href="#"><i class="fa-regular fa-circle-question"></i> Suporte</a></li>
+                    <li class="py-2"><a href="#"><i class="fa-regular fa-user"></i> Perfil</a></li>
+                    <li class="py-2"><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
                 </ul>
             </nav>
         </aside>
-    </div>  
+
+        <!-- Conteúdo da Central de Ajuda -->
+        <main class="p-4">
+            <h1 class="text-center text-2xl font-bold mb-4">Central de Ajuda</h1>
+
+            <div class="mb-4">
+                <input type="text" placeholder="Pesquisar artigos" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <nav class="flex justify-around mb-4 border-b">
+                <button class="text-sm py-2 px-4 border-b-2 border-red-600 text-red-600">Passageiro</button>
+                <button class="text-sm py-2 px-4 text-black">Pagamento</button>
+                <button class="text-sm py-2 px-4 text-black">Conta</button>
+                <button class="text-sm py-2 px-4 text-black">Contato</button>
+            </nav>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-2 text-black-600">Artigos populares</h2>
+
+                <div class="mb-4 p-4 bg-white border-l-4 border-red-600 shadow">
+                    <h3 class="font-bold">Como reembolsar minha passagem?</h3>
+                    <p class="text-sm text-gray-600">Certifique-se de que ela está dentro do prazo e das condições de reembolso.</p>
+                    <a href="#" class="text-red-600 text-sm">Saiba mais →</a>
+                </div>
+
+                <div class="mb-4 p-4 bg-white border-l-4 border-red-600 shadow">
+                    <h3 class="font-bold">Como faço para alterar a data ou horário da minha viagem?</h3>
+                    <p class="text-sm text-gray-600">As passagens podem ser alteradas desde que estejam dentro do prazo permitido.</p>
+                    <a href="#" class="text-red-600 text-sm">Saiba mais →</a>
+                </div>
+
+                <div class="mb-4 p-4 bg-white border-l-4 border-red-600 shadow">
+                    <h3 class="font-bold">Quais são os canais de atendimento para reclamações e sugestões?</h3>
+                    <p class="text-sm text-gray-600">Atendimento via telefone: Ligue para o nosso SAC.</p>
+                    <a href="#" class="text-red-600 text-sm">Saiba mais →</a>
+                </div>
+
+                <!-- Nova Caixa de Artigo -->
+                <div class="mb-4 p-4 bg-white border-l-4 border-red-600 shadow">
+                    <h3 class="font-bold">Como visualizar o status da minha linha em tempo real?</h3>
+                    <p class="text-sm text-gray-600">Acesse a seção de Situação no site para obter informações atualizadas sobre o status da sua linha.</p>
+                    <a href="#" class="text-red-600 text-sm">Saiba mais →</a>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
