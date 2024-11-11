@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>CPTM</title>
+    <title>Trajeto Metrô</title>
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>   
@@ -23,7 +23,7 @@
             <div class="flex-grow text-center">
                 <a href="home.html">
                     <!-- Logo com transição de opacidade ao abrir o menu -->
-                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="../img/cptm.png" alt="CPTM logo" 
+                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="../imgs/cptm.png" alt="CPTM logo" 
                          class="logocptm inline-block transition-opacity duration-300">
                 </a>
             </div>
@@ -56,9 +56,9 @@
                     <!-- Cateira -->
                     <li class="py-2 flex items-center justify-between">
                         <div class="flex items-center space-x-2">
-                            <span class="text-gray-700" id="money"><i class="fa-solid fa-wallet text-gray-700" id="wallet"></i>  R$</span>
-                            <span class="text-gray-700" x-show="showMoney" id="money">1.000,00</span>
-                            <span class="text-gray-700" x-show="!showMoney" id="money">●●●●●</span>
+                            <span class="text-gray-500" id="money"><i class="fa-solid fa-wallet text-gray-500" id="wallet"></i>  R$</span>
+                            <span class="text-gray-500" x-show="showMoney" id="money">1.000,00</span>
+                            <span class="text-gray-500" x-show="!showMoney" id="money">●●●●●</span>
                         </div>
                         <button @click="showMoney = !showMoney" class="text-red-500 focus:outline-none">
                             <i x-show="!showMoney" class="fa-regular fa-eye-slash text-xl" id="eye"></i>
@@ -69,10 +69,10 @@
                     <li class="py-2"><a href="qrcode.html"><i class="fa-solid fa-qrcode" id="qrcode"></i>  QR Code</a></li>
                     <li class="py-2"><a href="situacao.html"><i class="fa-regular fa-clock" id="clock"></i>  Situação</a></li>
                     <li class="py-2"><a href="linhas.html"><i class="fa-solid fa-train-subway" id="subway"></i>  Linhas</a></li>
-                    <li class="py-2"><a href="mapa.html"><i class="fa-solid fa-map-location-dot" id="map"></i>  Mapa</a></li>
-                    <li class="py-2"><a href="#"><i class="fa-regular fa-circle-question" id="suport"></i>  Suporte</a></li>
+                    <li class="py-2"><a href="mapa.html"><i class="fa-regular fa-map"></i>  Mapa</a></li>
+                    <li class="py-2"><a href="suporte.html"><i class="fa-regular fa-circle-question" id="suport"></i>  Suporte</a></li>
                     <li class="py-2"><a href="#"><i class="fa-regular fa-user" id="perfil"></i>  Perfil</a></li>
-                    <li class="py-2"><a href="#"><i class="fa-solid fa-right-from-bracket" id="logout"></i>  Sair</a></li>
+                    <li class="py-2"><a href="login.html"><i class="fa-solid fa-right-from-bracket" id="logout"></i>  Sair</a></li>
                 </ul>
             </nav>
         </aside>
@@ -116,7 +116,7 @@
             </div>
             <!-- Banner inferior -->
             <div class="text-white mt-8 w-full h-auto flex flex-col items-center">
-                <img src="../img/metro.png" alt="Metro CPTM" class="w-full h-2/4" id="metrocptm">
+                <img src="../imgs/metro.png" alt="Metro CPTM" class="w-full h-2/4" id="metrocptm">
                 <p class="mt-2 text-lg" id="metrocptmtext">
                     <span class="text-red-500 text-xl font-bold" id="textotitulo">Viaje com praticidade e segurança</span>
                     <br><br><span class="text-sm font-bold" id="texto">Com a CPTM, você pode planejar sua viagem com facilidade. Acesse os horários dos trens, escolha sua rota e aproveite um transporte rápido e eficiente para chegar ao seu destino.</span><br><br>

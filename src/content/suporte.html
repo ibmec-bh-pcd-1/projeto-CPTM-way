@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>CPTM</title>
+    <link rel="stylesheet" href="../css/suporte.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="//unpkg.com/alpinejs" defer></script>   
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white h-screen w-full">
+    <div x-data="{ open: false, showMoney: false }" class="relative">
+        <!-- Botão para abrir o menu -->
+        <header class="bg-white-200 p-4 flex justify-between items-center z-20 relative">
+            <button @click="open = !open" class="text-xl flex items-center space-x-2" id="menu-button">
+                <i class="fa-regular fa-user" id="menu"></i> 
+                <span :class="{ 'rotate-180': open }" class="inline-block transition-transform transform origin-center flex items-center">
+                    <i class="fa-solid fa-chevron-right" id="seta"></i>
+                </span>
+            </button>
+            <div class="flex-grow text-center">
+                <a href="home.html">
+                    <!-- Logo com transição de opacidade ao abrir o menu -->
+                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="../imgs/cptm.png" alt="CPTM logo" 
+                         class="logocptm inline-block transition-opacity duration-300">
+                </a>
+            </div>
+        </header>
+      
+        <!-- Overlay escuro atrás do menu -->
+        <div x-show="open" 
+             @click="open = false" 
+             class="fixed inset-0 bg-black bg-opacity-50 z-10" 
+             x-transition:enter="transition-opacity ease-out duration-300" 
+             x-transition:enter-start="opacity-0" 
+             x-transition:enter-end="opacity-100" 
+             x-transition:leave="transition-opacity ease-in duration-200" 
+             x-transition:leave-start="opacity-100" 
+             x-transition:leave-end="opacity-0">
+        </div>
+      
+        <!-- Menu lateral -->
+        <aside x-show="open" 
+            class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg p-4 transform transition-transform z-10" 
+            x-transition:enter="transform transition-transform ease-out duration-300" 
+            x-transition:enter-start="-translate-x-full" 
+            x-transition:enter-end="translate-x-0" 
+            x-transition:leave="transform transition-transform ease-in duration-200" 
+            x-transition:leave-start="translate-x-0" 
+            x-transition:leave-end="-translate-x-full">
+            <nav class="flex flex-col h-full justify-between">
+                <ul class="mt-16">
+                    <li class="py-2 flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-gray-500"><i class="fa-solid fa-wallet text-gray-500"></i> R$</span>
+                            <span class="text-gray-500" x-show="showMoney">1.000,00</span>
+                            <span class="text-gray-500" x-show="!showMoney">●●●●●</span>
+                        </div>
+                        <button @click="showMoney = !showMoney" class="text-red-500 focus:outline-none">
+                            <i x-show="!showMoney" class="fa-regular fa-eye-slash text-xl"></i>
+                            <i x-show="showMoney" class="fa-regular fa-eye text-xl"></i>
+                        </button>
+                    </li>
+                    <li class="py-2"><a href="qrcode.html"><i class="fa-solid fa-qrcode"></i> QR Code</a></li>
+                    <li class="py-2"><a href="situacao.html"><i class="fa-regular fa-clock"></i> Situação</a></li>
+                    <li class="py-2"><a href="linhas.html"><i class="fa-solid fa-train-subway"></i> Linhas</a></li>
+                    <li class="py-2"><a href="mapa.html"><i class="fa-regular fa-map"></i> Mapa</a></li>
+                    <li class="py-2"><a href="suporte.html"><i class="fa-regular fa-circle-question"></i> Suporte</a></li>
+                    <li class="py-2"><a href="#"><i class="fa-regular fa-user"></i> Perfil</a></li>
+                    <li class="py-2"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo da Central de Ajuda -->
+        <main class="p-4">
+            <h1 class="text-center text-2xl font-bold mb-4">Central de Ajuda</h1>
+
+            <div class="mb-4">
+                <input type="text" placeholder="Pesquisar artigos" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <nav class="flex justify-around mb-4 border-b">
+                <button class="text-sm py-2 px-4 border-b-2 border-red-600 text-red-600">Passageiro</button>
+                <button class="text-sm py-2 px-4 text-black">Pagamento</button>
+                <button class="text-sm py-2 px-4 text-black">Conta</button>
+                <button class="text-sm py-2 px-4 text-black">Contato</button>
+            </nav>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-2 text-black-600">Artigos populares</h2>
+
+                <div class="mb-4 p-4 bg-white border-l-2 border-red-500 shadow">
+                    <h3 class="font-bold">Como reembolsar minha passagem?</h3>
+                    <p class="text-sm text-gray-600">Certifique-se de que ela está dentro do prazo e das condições de reembolso.</p>
+                    <a href="#" class="text-red-600 text-sm">Saiba mais →</a>
+                </div>
+
+                <div class="mb-4 p-4 bg-white border-l-2 border-red-500 shadow">
+                    <h3 class="font-bold">Como faço para alterar a data ou horário da minha viagem?</h3>
+                    <p class="text-sm text-gray-600">As passagens podem ser alteradas desde que estejam dentro do prazo permitido.</p>
+                    <a href="#" class="text-red-600 text-sm">Saiba mais →</a>
+                </div>
+
+                <div class="mb-4 p-4 bg-white border-l-2 border-red-500 shadow">
+                    <h3 class="font-bold">Quais são os canais de atendimento para reclamações e sugestões?</h3>
+                    <p class="text-sm text-gray-600">Atendimento via telefone: Ligue para o nosso SAC.</p>
+                    <a href="#" class="text-red-600 text-sm">Saiba mais →</a>
+                </div>
+
+                <!-- Nova Caixa de Artigo -->
+                <div class="mb-4 p-4 bg-white border-l-2 border-red-500 shadow">
+                    <h3 class="font-bold">Como visualizar o status da minha linha em tempo real?</h3>
+                    <p class="text-sm text-gray-600">Acesse a seção de Situação no site para obter informações atualizadas sobre o status da sua linha.</p>
+                    <a href="#" class="text-red-600 text-sm">Saiba mais →</a>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

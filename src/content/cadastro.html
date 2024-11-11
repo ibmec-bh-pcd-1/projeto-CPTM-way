@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>Interface Responsiva</title>
-    <link rel="stylesheet" href="../css/situacao.css">
     <title>CPTM</title>
     <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -25,7 +23,7 @@
             <div class="flex-grow text-center">
                 <a href="home.html">
                     <!-- Logo com transição de opacidade ao abrir o menu -->
-                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="../img/cptm.png" alt="CPTM logo" 
+                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="../imgs/cptm.png" alt="CPTM logo" 
                          class="logocptm inline-block transition-opacity duration-300">
                 </a>
             </div>
@@ -58,9 +56,9 @@
                     <!-- Cateira -->
                     <li class="py-2 flex items-center justify-between">
                         <div class="flex items-center space-x-2">
-                            <span class="text-gray-700" id="money"><i class="fa-solid fa-wallet text-gray-700" id="wallet"></i>  R$</span>
-                            <span class="text-gray-700" x-show="showMoney" id="money">1.000,00</span>
-                            <span class="text-gray-700" x-show="!showMoney" id="money">●●●●●</span>
+                            <span class="text-gray-500" id="money"><i class="fa-solid fa-wallet text-gray-500" id="wallet"></i>  R$</span>
+                            <span class="text-gray-500" x-show="showMoney" id="money">1.000,00</span>
+                            <span class="text-gray-500" x-show="!showMoney" id="money">●●●●●</span>
                         </div>
                         <button @click="showMoney = !showMoney" class="text-red-500 focus:outline-none">
                             <i x-show="!showMoney" class="fa-regular fa-eye-slash text-xl" id="eye"></i>
@@ -71,62 +69,16 @@
                     <li class="py-2"><a href="qrcode.html"><i class="fa-solid fa-qrcode" id="qrcode"></i>  QR Code</a></li>
                     <li class="py-2"><a href="situacao.html"><i class="fa-regular fa-clock" id="clock"></i>  Situação</a></li>
                     <li class="py-2"><a href="linhas.html"><i class="fa-solid fa-train-subway" id="subway"></i>  Linhas</a></li>
-                    <li class="py-2"><a href="mapa.html"><i class="fa-solid fa-map-location-dot" id="map"></i>  Mapa</a></li>
-                    <li class="py-2"><a href="#"><i class="fa-regular fa-circle-question" id="suport"></i>  Suporte</a></li>
+                    <li class="py-2"><a href="mapa.html"><i class="fa-regular fa-map"></i>  Mapa</a></li>
+                    <li class="py-2"><a href="suporte.html"><i class="fa-regular fa-circle-question" id="suport"></i>  Suporte</a></li>
                     <li class="py-2"><a href="#"><i class="fa-regular fa-user" id="perfil"></i>  Perfil</a></li>
-                    <li class="py-2"><a href="#"><i class="fa-solid fa-right-from-bracket" id="logout"></i>  Sair</a></li>
+                    <li class="py-2"><a href="login.html"><i class="fa-solid fa-right-from-bracket" id="logout"></i>  Sair</a></li>
                     
                 </ul>
             </nav>
         </aside>
-    </div>      
-    <div class="header font-bold text-lg">
-        <h1>Situação</h1>
-    </div>
-
-    <div class="tabs">
-        <a href="#" class="tab-button active">CPTM</a>
-        <a href="#" class="tab-button">Metrô</a>
-        <a href="#" class="tab-button">ViaQuatro</a>
-        <a href="#" class="tab-button">ViaMob</a>
-    </div>
-
-    <div class="content">
-        <div class="line-status">
-            <span class="line-number red">7</span>
-            <span class="line-name">Rubi</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-        <div class="line-status">
-            <span class="line-number turquoise">10</span>
-            <span class="line-name">Turquesa</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-        <div class="line-status">
-            <span class="line-number coral">11</span>
-            <span class="line-name">Coral</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-        <div class="line-status">
-            <span class="line-number sapphire">12</span>
-            <span class="line-name">Safira</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-        <div class="line-status">
-            <span class="line-number jade">13</span>
-            <span class="line-name">Jade</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-    </div>
-
-    <div class="close-button">
-        <img src="../img/logo.png" alt="Close Icon" class="close-icon">
-    </div>
-    
-</body>
-</html>
         <body class="bg-white h-screen w-full flex items-center justify-center">
-            <div class="container bg-red-500 p-6 rounded-lg shadow-lg w-full max-w-md">
+            <div class="container bg-red-500 p-6 shadow-lg max-w-md max-h-80">
                 <h2 class="text-white text-xl font-bold mb-6 text-center">Crie sua conta CPTM</h2>
                 <form id="cadastroForm" class="bg-white p-6 rounded-lg shadow-lg">
                     <label for="email" class="text-red-500 font-semibold">E-mail</label>
@@ -141,9 +93,8 @@
                     <label for="confirmSenha" class="text-red-500 font-semibold">Confirme sua senha</label>
                     <input type="password" id="confirmSenha" class="w-full p-3 mt-1 mb-6 border border-gray-300 rounded" placeholder="Confirme sua senha" required>
         
-                    <a href="login.html"><button id="button2" type="submit" class="w-full bg-red-500 text-white font-bold py-3 rounded transition duration-200 hover:bg-red-600">Cadastrar</button></a>
+                    <button id="button2" type="submit" class="w-full bg-red-500 text-white font-bold py-3 rounded transition duration-200 hover:bg-red-600">Cadastrar</button>
                 </form>
             </div>
-    
-
-    </div>  
+        </body>
+    </div>

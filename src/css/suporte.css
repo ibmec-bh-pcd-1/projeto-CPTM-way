@@ -1,0 +1,213 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Logo CPTM */
+.logocptm {
+    width: 50px;
+    margin-right: 45px;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Estilização da Central de Ajuda */
+.search-bar input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Tabs de navegação */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab {
+    font-size: 14px;
+    padding: 10px;
+    color: #79747E;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: #F7494B;
+    border-bottom: 2px solid #F7494B;
+}
+
+/* Seção de Artigos */
+.articles {
+    padding: 20px;
+}
+
+.articles h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #F7494B;
+}
+
+.article {
+    background-color: #fff;
+    border-left: 4px solid #F7494B;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.article h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+.article p {
+    font-size: 14px;
+    color: #555;
+}
+
+.article a {
+    color: #F7494B;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .search-box {
+        width: 95%;
+    }
+
+    .footer-banner img {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 18px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    #elementos-meio {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin-right: 0;
+        margin-left: 50px;
+        gap: 12px;
+    }
+
+    #metrocptm {
+        height: 100%;
+        padding-top: 0;
+        margin-top: 0;
+        padding-bottom: 5%;
+    }
+
+    #textotitulo {
+        font-size: 30px;
+    }
+
+    .search-bar input {
+        width: 95%;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        flex: 1;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .article {
+        padding: 10px;
+    }
+}
+
+#menu-button {
+    padding-left: 10px;
+}
+#menu {
+    color: #F7494B;
+}
+#seta {
+    color: #79747E;
+    font-size: 12px;
+}
+
+
+#wallet {
+    color: #79747E;
+}
+#money {
+    color: #79747E;
+}
+#eye {
+    color: #79747E;
+    font-size: 15px;
+}
+
+.py-2 {
+    width: 60%;
+    height: 20%;
+    border-bottom: 1px solid #C9C6C6;
+    display: flex;
+    align-items: center;
+    color: #79747E;
+}
+
+#qrcode, #clock, #subway, #map, #suport, #perfil, #logout {
+    color: #79747E;
+}
+
+#search-input {
+    border: 1px solid #C9C6C6;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#tabs-container {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #C9C6C6;
+}
+
+#tabs-container .tab {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#tabs-container .tab.active {
+    color: #F7494B;
+    border-bottom: 2px solid #F7494B;
+}
+
+#articles-section {
+    padding: 20px;
+}
+
+#articles-section .article {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid #F7494B;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

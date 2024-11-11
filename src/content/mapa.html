@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-
-    <title>Interface Responsiva</title>
-    <link rel="stylesheet" href="../css/situacao.css">
-
     <title>CPTM</title>
-    <link rel="stylesheet" href="../css/cadastro.css">
-
+    <link rel="stylesheet" href="../css/mapa.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>   
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #mapagoogle {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body class="bg-white h-screen w-full">
     <div x-data="{ open: false, showMoney: false }" class="relative">
@@ -28,7 +29,7 @@
             <div class="flex-grow text-center">
                 <a href="home.html">
                     <!-- Logo com transição de opacidade ao abrir o menu -->
-                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="../img/cptm.png" alt="CPTM logo" 
+                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="../imgs/cptm.png" alt="CPTM logo" 
                          class="logocptm inline-block transition-opacity duration-300">
                 </a>
             </div>
@@ -61,9 +62,9 @@
                     <!-- Cateira -->
                     <li class="py-2 flex items-center justify-between">
                         <div class="flex items-center space-x-2">
-                            <span class="text-gray-700" id="money"><i class="fa-solid fa-wallet text-gray-700" id="wallet"></i>  R$</span>
-                            <span class="text-gray-700" x-show="showMoney" id="money">1.000,00</span>
-                            <span class="text-gray-700" x-show="!showMoney" id="money">●●●●●</span>
+                            <span class="text-gray-500" id="money"><i class="fa-solid fa-wallet text-gray-500" id="wallet"></i>  R$</span>
+                            <span class="text-gray-500" x-show="showMoney" id="money">1.000,00</span>
+                            <span class="text-gray-500" x-show="!showMoney" id="money">●●●●●</span>
                         </div>
                         <button @click="showMoney = !showMoney" class="text-red-500 focus:outline-none">
                             <i x-show="!showMoney" class="fa-regular fa-eye-slash text-xl" id="eye"></i>
@@ -74,80 +75,76 @@
                     <li class="py-2"><a href="qrcode.html"><i class="fa-solid fa-qrcode" id="qrcode"></i>  QR Code</a></li>
                     <li class="py-2"><a href="situacao.html"><i class="fa-regular fa-clock" id="clock"></i>  Situação</a></li>
                     <li class="py-2"><a href="linhas.html"><i class="fa-solid fa-train-subway" id="subway"></i>  Linhas</a></li>
-                    <li class="py-2"><a href="mapa.html"><i class="fa-solid fa-map-location-dot" id="map"></i>  Mapa</a></li>
-                    <li class="py-2"><a href="#"><i class="fa-regular fa-circle-question" id="suport"></i>  Suporte</a></li>
-                    <li class="py-2"><a href="#"><i class="fa-regular fa-user" id="perfil"></i>  Perfil</a></li>
-                    <li class="py-2"><a href="#"><i class="fa-solid fa-right-from-bracket" id="logout"></i>  Sair</a></li>
-                    
+                    <li class="py-2"><a href="mapa.html"><i class="fa-regular fa-map"></i>  Mapa</a></li>
+                    <li class="py-2"><a href="suporte.html"><i class="fa-regular fa-circle-question" id="suport"></i>  Suporte</a></li>
+                    <!-- <li class="py-2"><a href="#"><i class="fa-regular fa-user" id="perfil"></i>  Perfil</a></li> -->
+                    <li class="py-2"><a href="login.html"><i class="fa-solid fa-right-from-bracket" id="logout"></i>  Sair</a></li>
                 </ul>
             </nav>
         </aside>
-
-    </div>      
-    <div class="header font-bold text-lg">
-        <h1>Situação</h1>
-    </div>
-
-    <div class="tabs">
-        <a href="#" class="tab-button active">CPTM</a>
-        <a href="#" class="tab-button">Metrô</a>
-        <a href="#" class="tab-button">ViaQuatro</a>
-        <a href="#" class="tab-button">ViaMob</a>
-    </div>
-
-    <div class="content">
-        <div class="line-status">
-            <span class="line-number red">7</span>
-            <span class="line-name">Rubi</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-        <div class="line-status">
-            <span class="line-number turquoise">10</span>
-            <span class="line-name">Turquesa</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-        <div class="line-status">
-            <span class="line-number coral">11</span>
-            <span class="line-name">Coral</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-        <div class="line-status">
-            <span class="line-number sapphire">12</span>
-            <span class="line-name">Safira</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-        <div class="line-status">
-            <span class="line-number jade">13</span>
-            <span class="line-name">Jade</span>
-            <span class="status normal">Operação normal</span>
+    </div> 
+    <div class="container2 mx-auto p-4 max-w-md">
+        <div class="search-section text-center">
+            <h1 class="text-lg font-semibold mb-1 flex justify-left">Ache seu caminho conosco</h1>
+            <input type="text" id="start" placeholder="Saindo de" class="search-input mb-2 p-3 w-full bg-gray-100 rounded-md">
+            <input type="text" id="end" placeholder="Indo para" class="search-input mb-4 p-3 w-full bg-gray-100 rounded-md">
+            <button onclick="calculateRoute()" class="mb-4 p-3 bg-red-500 text-white rounded-md w-full font-semibold">Procurar seu caminho</button>
+        
+            <div id="mapagoogle" class="w-full h-80 rounded-md shadow-md mb-4"></div>
+            
+            <h2 class="text-lg font-semibold mb-2 flex justify-left">Sugestões</h2>
+            <div class="suggestions-grid grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
+                <div class="suggestion-item p-3 bg-gray-100 rounded-md flex items-center justify-center">
+                    Casa
+                </div>
+                <div class="suggestion-item p-3 bg-gray-100 rounded-md flex items-center justify-center">
+                    Ibmec
+                </div>
+                <div class="suggestion-item p-3 bg-gray-100 rounded-md flex items-center justify-center">
+                    Ibmec
+                </div>
+                <div class="suggestion-item p-3 bg-gray-100 rounded-md flex items-center justify-center">
+                    Casa
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="close-button">
-        <img src="../img/logo.png" alt="Close Icon" class="close-icon">
-    </div>
-    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA62cESUiB52VWrYe05TleAaJFSAyRXlQQ&callback=initMap" async defer></script>
+    <script>
+        let map, directionsService, directionsRenderer;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("mapagoogle"), {
+                center: { lat: -23.55052, lng: -46.633308 }, // Centro de São Paulo
+                zoom: 13,
+            });
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+        }
+
+        function calculateRoute() {
+            const start = document.getElementById("start").value;
+            const end = document.getElementById("end").value;
+
+            if (start && end) {
+                const request = {
+                    origin: start,
+                    destination: end,
+                    travelMode: google.maps.TravelMode.DRIVING,
+                };
+                directionsService.route(request, (result, status) => {
+                    if (status === google.maps.DirectionsStatus.OK) {
+                        directionsRenderer.setDirections(result);
+                    } else {
+                        alert("Não foi possível calcular a rota. Tente novamente.");
+                    }
+                });
+            } else {
+                alert("Por favor, preencha ambos os campos.");
+            }
+        }
+    </script>
 </body>
 </html>
-        <body class="bg-white h-screen w-full flex items-center justify-center">
-            <div class="container bg-red-500 p-6 rounded-lg shadow-lg w-full max-w-md">
-                <h2 class="text-white text-xl font-bold mb-6 text-center">Crie sua conta CPTM</h2>
-                <form id="cadastroForm" class="bg-white p-6 rounded-lg shadow-lg">
-                    <label for="email" class="text-red-500 font-semibold">E-mail</label>
-                    <input type="email" id="email" class="w-full p-3 mt-1 mb-4 border border-gray-300 rounded" placeholder="Digite seu e-mail" required>
-        
-                    <label for="confirmEmail" class="text-red-500 font-semibold">Confirme seu E-mail</label>
-                    <input type="email" id="confirmEmail" class="w-full p-3 mt-1 mb-4 border border-gray-300 rounded" placeholder="Confirme seu e-mail" required>
-        
-                    <label for="senha" class="text-red-500 font-semibold">Senha</label>
-                    <input type="password" id="senha" class="w-full p-3 mt-1 mb-4 border border-gray-300 rounded" placeholder="Digite sua senha" required>
-        
-                    <label for="confirmSenha" class="text-red-500 font-semibold">Confirme sua senha</label>
-                    <input type="password" id="confirmSenha" class="w-full p-3 mt-1 mb-6 border border-gray-300 rounded" placeholder="Confirme sua senha" required>
-        
-                    <button id="button2" type="submit" class="w-full bg-red-500 text-white font-bold py-3 rounded transition duration-200 hover:bg-red-600">Cadastrar</button>
-                </form>
-            </div>
-    
-
-    </div>  
