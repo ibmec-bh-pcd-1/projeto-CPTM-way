@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>Interface Responsiva</title>
-    <link rel="stylesheet" href="../css/situacao.css">
+    <title>CPTM</title>
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>   
     <script src="https://cdn.tailwindcss.com"></script>
@@ -66,7 +66,7 @@
                         </button>
                     </li>
                     <!-- Links -->
-                    <li class="py-2"><a href="#"><i class="fa-solid fa-qrcode" id="qrcode"></i>  QR Code</a></li>
+                    <li class="py-2"><a href="qrcode.html"><i class="fa-solid fa-qrcode" id="qrcode"></i>  QR Code</a></li>
                     <li class="py-2"><a href="situacao.html"><i class="fa-regular fa-clock" id="clock"></i>  Situação</a></li>
                     <li class="py-2"><a href="linhas.html"><i class="fa-solid fa-train-subway" id="subway"></i>  Linhas</a></li>
                     <li class="py-2"><a href="mapa.html"><i class="fa-solid fa-map-location-dot" id="map"></i>  Mapa</a></li>
@@ -77,48 +77,57 @@
             </nav>
         </aside>
     </div>      
-    <div class="header font-bold text-lg">
-        <h1>Situação</h1>
-    </div>
+    <div class="flex flex-col items-center text-center w-full">
+        <header class="w-full bg-red-500 h-32">
+            <h1 class="text-white text-2xl my-5 font-bold m-4 mt-6">Ligando São Paulo de forma rápida e eficiente todos os dias</h1>
+        </header>
+        <main class="w-full max-w-full bg-red-500 flex flex-col items-center h-32">
+            <div class="bg-white rounded-lg shadow-md p-5 w-11/12">
+                <form>
+                    <div class="mb-4 text-left">
+                        <input type="text" placeholder="Saindo de" required class="w-full p-2 mt-1 border-b border-gray-300 focus:outline-none pb-7">
+                    </div>
+                    <div class="mb-6 text-left">
+                        <input type="text" placeholder="Indo para" required class="w-full p-2 mt-1 focus:outline-none">
+                    </div>
+                    <button type="submit" class="w-full bg-red-500 text-white p-2 text-lg rounded-md hover:bg-red-600 transition">Buscar</button>
+                </form>
+            </div>
 
-    <div class="tabs">
-        <a href="#" class="tab-button active">CPTM</a>
-        <a href="#" class="tab-button">Metrô</a>
-        <a href="#" class="tab-button">ViaQuatro</a>
-        <a href="#" class="tab-button">ViaMob</a>
+            <div class="flex flex-row justify-center pt-4 mt-8 w-full text-left gap-10 mr-8" id="elementos-meio">
+                <p class="text-2x1 my-5 w-60" id="velocidade">
+                    <i class="fa-solid fa-gauge-high" id="speed"></i>
+                    <br>
+                    <br><span class="font-bold text-red-500">Bilhetes Online, Viagem Rápida</span> 
+                    <br><span class="text-sm">Economize tempo comprando online quando e onde quiser!</span>
+                </p>
+                <p class="text-2x1 my-5 w-60" id="bussola">
+                    <i class="fa-solid fa-compass" id="compass"></i>
+                    <br>
+                    <br><span class="font-bold text-red-500">Escolha o melhor trajeto</span>
+                    <br><span class="text-sm">Encontre o melhor caminho para o seu destino! Planeje seu trajeto com a CPTM!</span>
+                </p>
+                <p class="text-2x1 my-5 w-60" id="mapa-pino">
+                    <i class="fa-solid fa-map-pin" id="map-pin"></i>
+                    <br>
+                    <br><span class="font-bold text-red-500">Muitos destinos</span>
+                    <br><span class="text-sm">Explore a cidade! Chegue aos principais pontos da Grande São Paulo com a CPTM!</span>
+                </p>
+            </div>
+            <!-- Banner inferior -->
+            <div class="text-white mt-8 w-full h-auto flex flex-col items-center">
+                <img src="../img/metro.png" alt="Metro CPTM" class="w-full h-2/4" id="metrocptm">
+                <p class="mt-2 text-lg" id="metrocptmtext">
+                    <span class="text-red-500 text-xl font-bold" id="textotitulo">Viaje com praticidade e segurança</span>
+                    <br><br><span class="text-sm font-bold" id="texto">Com a CPTM, você pode planejar sua viagem com facilidade. Acesse os horários dos trens, escolha sua rota e aproveite um transporte rápido e eficiente para chegar ao seu destino.</span><br><br>
+                    <button class="bg-red-500 rounded-full h-10 w-32">
+                        <a href="https://www.cptm.sp.gov.br/" target="_blank" class="text-white font-bold text-base flex justify-center">Saiba mais</a>
+                    </button>
+                    <br>
+                    <br>
+                </p>
+            </div>
+        </main>
     </div>
-
-    <div class="content">
-        <div class="line-status">
-            <span class="line-number red">7</span>
-            <span class="line-name">Rubi</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-        <div class="line-status">
-            <span class="line-number turquoise">10</span>
-            <span class="line-name">Turquesa</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-        <div class="line-status">
-            <span class="line-number coral">11</span>
-            <span class="line-name">Coral</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-        <div class="line-status">
-            <span class="line-number sapphire">12</span>
-            <span class="line-name">Safira</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-        <div class="line-status">
-            <span class="line-number jade">13</span>
-            <span class="line-name">Jade</span>
-            <span class="status normal">Operação normal</span>
-        </div>
-    </div>
-
-    <div class="close-button">
-        <img src="../img/logo.png" alt="Close Icon" class="close-icon">
-    </div>
-    
 </body>
 </html>
