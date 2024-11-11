@@ -114,6 +114,7 @@ h1 {
 }
 
 
+<<<<<<<< HEAD:src/css1/mapa.css
 #speed {
     color: #79747E;
     font-size: 2em;
@@ -130,6 +131,7 @@ h1 {
 #texto {
     color: #79747E; 
 }
+========
 
 
 /* Contêiner principal */
@@ -203,3 +205,4 @@ input {
     }
 }
 
+>>>>>>>> Cadastro:css1/cadastro.css
