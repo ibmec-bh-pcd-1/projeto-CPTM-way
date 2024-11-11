@@ -14,7 +14,7 @@ h1 {
 } 
 
 .red-background {
-    width: 100%px;
+    width: 100%;
     height: 25vh;
     background-color: #F7494B;
     padding: 30px;
@@ -23,7 +23,7 @@ h1 {
 }
 
 .login-container {
-    max-width: 430px;
+    max-width: 100%;
     width: 100%;
     background-color: #ffffff;
     padding: 20px;
@@ -39,14 +39,16 @@ h1 {
     margin-bottom: 20px;
     font-weight: bold;
 }
-
+.caixa{
+    border: #a3a2a2 solid 1px;
+    height: 250px;
+}
 form {
     width: 100%;
+    height: 300px;
     display: flex;
     flex-direction: column;
-    
 }
-
 form label {
     font-size: 1rem;
     color: #000000;
@@ -73,9 +75,9 @@ form input[type="password"] {
     color: #ffffff;
     background-color: #F7494B;
     border: none;
-    border-radius: 20px;
+    margin-top: -95px;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 15px;
     transition: background-color 0.3s;
 }
 
