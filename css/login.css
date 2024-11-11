@@ -42,6 +42,8 @@ h1 {
 .caixa{
     border: #a3a2a2 solid 1px;
     height: 250px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 form {
     width: 100%;
@@ -76,7 +78,8 @@ form input[type="password"] {
     background-color: #F7494B;
     border: none;
     margin-top: -95px;
-    border-radius: 5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
