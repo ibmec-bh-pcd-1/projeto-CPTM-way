@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="//unpkg.com/alpinejs" defer></script>   
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white h-screen w-full">
+    <div x-data="{ open: false, showMoney: false }" class="relative">
+        <header class="bg-white-200 p-4 flex justify-between items-center z-20 relative">
+            </button>
+            <div class="flex-grow text-center">
+                <a href="home.html">
+                    <img :class="open ? 'opacity-0' : 'opacity-100'" src="../imgs/cptm.png" alt="CPTM logo" 
+                         class="logocptm inline-block transition-opacity duration-300">
+                </a>
+            </div>
+        </header>
+    
+        </aside>
+    </div>  
+    
+    <div class="login-container mx-auto">
+        <div class="red-background">
+            <h2 class="text-left flex font-bold text-2xl mb-8">Entrar na sua conta</h2>
+            <div class="caixa shadow-md">
+                <form id="loginForm" class="bg-white shadow-md px-8 pt-8">
+                        <input class="w-full text-red-700 border-b border-gray-300 focus:outline-none" id="email" type="email" placeholder="Email:" required>
+                        <input class="w-full text-red-700 focus:outline-none" id="senha" type="password" placeholder="Senha:" required>
+            </div>   
+                    <div>
+                        <button class="login-button shadow-lg font-bold" type="button" onclick="window.location.href='home.html'">Continuar</button>
+                    </div>
+                </form>
+            
+
+            <p class="text-center text-gray-600 my-4 font-semibold">Ou escolha a opção</p>
+
+            <div class="social-buttons">
+                <button class="social-button google-button"><i class="fab fa-google"></i> Continuar com Google</button>
+                <button class="social-button facebook-button"><i class="fab fa-facebook"></i> Continuar com Facebook</button>
+            </div>
+
+            <p class="create-account">Não tem conta? <a href="cadastro.html">Criar conta</a></p>
+        </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

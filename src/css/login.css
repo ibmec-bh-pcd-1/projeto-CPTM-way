@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logocptm {
+    width: 50px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+} 
+
+.red-background {
+    width: 100%;
+    max-width: 100%;
+    height: 15vh;
+    background-color: #F7494B;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container {
+    max-width: 100%;
+    width: 100%;
+    background-color: #F7494B;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.caixa{
+    height: 250px;
+    border-radius: 15px;
+}
+
+form {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.email{
+    color: #F7494B;
+}
+
+.login-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: #F7494B;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #f7494cb9;
+}
+
+.or {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 15px 0;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 10px;
+}
+
+.social-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #79747E;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.google-button {
+    color: #5F5F5F;
+}
+
+.google-button:hover {
+    background-color: #ffffffb7;
+}
+
+.facebook-button {
+    color: #5F5F5F;
+}
+
+.facebook-button:hover {
+    background-color: #ffffffb7;
+}
+
+.create-account {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+.create-account a {
+    color: #F7494B;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .search-box {
+        width: 95%;
+    }
+
+    .footer-banner img {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 18px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    #elementos-meio {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin-right: 0;
+        margin-left: 50px;
+        gap: 12px;
+    }
+
+    #metrocptm {
+        height: 100%;
+        padding-top: 0;
+        margin-top: 0;
+        padding-bottom: 5%;
+    }
+
+    #textotitulo {
+        font-size: 30px;
+    }
+
+    .search-bar input {
+        width: 95%;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        flex: 1;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .article {
+        padding: 10px;
+    }
+}
+
+#menu-button {
+    padding-left: 10px;
+}
+#menu {
+    color: #F7494B;
+}
+#seta {
+    color: #79747E;
+    font-size: 12px;
+}
+
+
+#wallet {
+    color: #79747E;
+}
+#money {
+    color: #79747E;
+}
+#eye {
+    color: #79747E;
+    font-size: 15px;
+}
+
+.py-2 {
+    width: 60%;
+    height: 20%;
+    border-bottom: 1px solid #C9C6C6;
+    display: flex;
+    align-items: center;
+    color: #79747E;
+}
+
+#qrcode, #clock, #subway, #map, #suport, #perfil, #logout {
+    color: #79747E;
+}
+
+#search-input {
+    border: 1px solid #C9C6C6;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#tabs-container {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #C9C6C6;
+}
+
+#tabs-container .tab {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#tabs-container .tab.active {
+    color: #F7494B;
+    border-bottom: 2px solid #F7494B;
+}
+
+#articles-section {
+    padding: 20px;
+}
+
+#articles-section .article {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid #F7494B;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
