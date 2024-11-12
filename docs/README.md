@@ -1,7 +1,7 @@
 # [GRUPO X] Nome do Projeto
 
 - [Link dos slides](https://docs.google.com/presentation/d/1WhcmPL6o3zCwUjxxyQNF7d44-AmTVTR8ej00qzn1UnQ/edit?usp=sharing)
-- [Modelo de registro de Dailies](https://docs.google.com/document/d/1ospYIjvdBkvggPqTcNsq0kXngsOSyrcn3BUriK0efbg/edit?usp=sharing)
+- [Registro de Dailies]([https://docs.google.com/document/d/1ospYIjvdBkvggPqTcNsq0kXngsOSyrcn3BUriK0efbg/edit?usp=sharing](https://docs.google.com/document/d/1vSZhW51dhtNj-8pVV2NqcxydRceb_y7opwrtA5_hyyk/edit?usp=sharing))
 
 ## Integrantes
 
