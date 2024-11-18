@@ -3,11 +3,6 @@
     font-family: 'Open Sans',
 }
 
-body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
-}
-
 #Navbar h2, #hf h2, #Bras h1, #Timer h1, #Endereço h2, #Mudança h1, #Acessibilidade h1, #Infos h1 {
     font-size: 1.5em; 
 }
@@ -64,7 +59,6 @@ body{
     border-bottom: #F7494B;
     position: relative;
     margin: 20px auto;
-
 }
 #linha {
     width: 99%;
@@ -234,11 +228,12 @@ body{
         font-size: 10px;
     }
 
-    #paihf {
+    #Pai{
+        background-color: #ffffff;
         display: flex;
         justify-content: center;
-        margin-top:20px;
-        font-size: 11px;
+        align-items: center;
+        flex-direction: column;
     }
 
     #hf {
@@ -246,26 +241,32 @@ body{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        max-width: 100%; 
+        width: 100%;
+        max-width: 90%; 
         padding: 0 10px; 
+        color: rgb(0, 0, 0);
+        font-weight: bold;
     }
-
+    
     #Bras {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #79747E;
+        justify-content:center;
+        align-items: end;
+        color: rgb(0, 0, 0);
         font-size: 13px;
         font-style: bold;
+        margin-top:40px ;
     }
 
     #Progresso {
         width: 100%; 
         max-width: 430px; 
         height: 35px;
-        background-color: rgb(231, 235, 238);
+        background-color: white;
         border-radius: 15px;
         margin: 20px auto;
+        border: 1px solid rgb(101, 100, 100);
+        
     }
 
     #linha {
@@ -285,13 +286,19 @@ body{
         left: 0;
     }
 
-    #Timer {
+    #timer {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 10px;
+        font-size: 25px;
+        color: rgb(101, 100, 100);
+        font-weight: bold;
+    }
+
+    #timer_chegada{
+        color: rgb(101, 100, 100);
     }
 
     #Endereço {
@@ -299,8 +306,18 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: gray;
+        color: rgb(101, 100, 100);
+        font-weight: 100;
         font-size: 15px;
+        font-weight: bold;
+    }
+    #caixa{
+        border-radius: 15px;
+        margin: 20px auto;
+        border: 1px solid #767474;
+        margin-left: 5px;
+        margin-right: 5px;
+
     }
 
     #MA {
@@ -380,35 +397,19 @@ body{
         font-size: 12px;
     }
 
-    #Primeiro_Lugar, #SegundoLugar, #Terceiro_Lugar {
-        display: flex;
-        align-items: center;
-        padding: 20px;
-        border: 1px solid lightgray;
-        border-radius: 10px;
-        gap: 20px;
-        font-size: 9px;
-    }
+    .carousel-description {
+        background-color: #F7494B; /* Cor de fundo vermelha */
+        color: white; /* Texto branco */
+        text-align: center; /* Centraliza o texto */
+        padding: 15px 10px; /* Espaçamento interno */
+        border-radius: 0 0 10px 10px; /* Arredonda os cantos inferiores para combinar com o carousel */
+        font-size: 20px; /* Aumenta o tamanho da fonte */
+        margin-top: -20px;
+        font-weight: bold;
+      }
 
-    #Primeiro_Lugar img, #SegundoLugar img, #Terceiro_Lugar img {
-        width: 100px; 
-        height: auto;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
-    #Primeiro_Lugar div, #SegundoLugar div, #Terceiro_Lugar div {
-        max-width: 100%; 
-    }
-
-    #Primeiro_Lugar h1, #SegundoLugar h1, #Terceiro_Lugar h1 { 
-        color: #F7494B;
-        margin: 0;
-    }
 }
 
-
-/*MENU LATERAL*/
 /* Logo CPTM */
 .logocptm {
     width: 50px;
@@ -535,3 +536,5 @@ h1 {
 #texto {
     color: #79747E; 
 }
+
+

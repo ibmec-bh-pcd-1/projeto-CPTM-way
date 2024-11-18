@@ -1,4 +1,3 @@
-
 const metrozinho = document.getElementById("metrozinho");
 const progresso = document.getElementById("Progresso");
 const timerDisplay = document.getElementById("timer");
@@ -37,4 +36,3 @@ function moverMetro() {
 window.onload = function() {
     moverMetro(); // Inicia o movimento do metrô assim que a página carregar
 }
-    
